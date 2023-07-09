@@ -1,4 +1,23 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*--------------------------------------------- Footer styling*/
+.fixed-bottom  {
+    background-color: black;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: blue;
+}
+
+.my-3 {
+    font-size: 33px;
 }
