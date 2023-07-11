@@ -3,10 +3,10 @@
 html {
     height: 100%;
 }
+
 body {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
@@ -16,7 +16,6 @@ body {
 
 main {
     margin-top: 80px;
-
 }
 
 /*--------------------------------------------- Footer styling*/
@@ -38,6 +37,7 @@ a:hover {
 }
 
 /*-----------------------------------  Section styling styling*/
+
 .first-section {
     display: flex;
     justify-content: center;
@@ -46,6 +46,7 @@ a:hover {
     background: linear-gradient(#988a8a, #090c2d);
     color: white;
     height: 100vh;
+
 }
 
 .second-section {
@@ -62,7 +63,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: linear-gradient(0.25turn, #92a9b3, #70786a, #785633);
     height: 100vh;
 }
 
@@ -71,8 +72,9 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+    background: linear-gradient(0.25turn, #0e0f0f, #353b30, #988571);
     height: 100vh;
+    color: white;
 }
 
 /*---------------------------------- Slide top class (taken from ANIMISTA)*/
