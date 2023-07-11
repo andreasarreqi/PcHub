@@ -3,6 +3,12 @@
 html {
     height: 100%;
 }
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 * {
     font-family: 'Hind Siliguri', sans-serif;
@@ -10,13 +16,16 @@ html {
 
 main {
     margin-top: 80px;
-    padding: 40px;
+
 }
 
 /*--------------------------------------------- Footer styling*/
-.fixed-bottom {
+.footer {
     background-color: black;
     font-size: 15px;
+    padding-left: 5%;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 a {
@@ -34,6 +43,9 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: linear-gradient(#988a8a, #090c2d);
+    color: white;
+    height: 100vh;
 }
 
 .second-section {
@@ -41,6 +53,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: linear-gradient(#e66465, #9198e5);
+    height: 100vh;
 }
 
 .third-section {
@@ -48,6 +62,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    height: 100vh;
 }
 
 .fourth-section {
@@ -55,6 +71,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+    height: 100vh;
 }
 
 /*---------------------------------- Slide top class (taken from ANIMISTA)*/
@@ -76,7 +94,7 @@ a:hover {
 }
 
 .slide-in-left {
-    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes slide-in-left {
