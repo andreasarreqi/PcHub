@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+html {
+    height: 100%;
+}
+
 * {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 main {
@@ -22,11 +28,36 @@ a:hover {
     color: blue;
 }
 
-.my-3 {
-    font-size: 33px;
+/*-----------------------------------  Section styling styling*/
+.first-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/*---------------------------------- Slide top class*/
+.second-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.third-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fourth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*---------------------------------- Slide top class (taken from ANIMISTA)*/
 .slide-in-top {
     animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -45,7 +76,7 @@ a:hover {
 }
 
 .slide-in-left {
-    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes slide-in-left {
