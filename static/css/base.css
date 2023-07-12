@@ -26,9 +26,11 @@ main {
     box-sizing: border-box;
     width: 100%;
 }
+
 span i {
     font-size: 30px;
 }
+
 a {
     text-decoration: none;
     color: white;
@@ -40,7 +42,7 @@ a:hover {
 
 /*-----------------------------------  Section styling styling*/
 section h3 {
-    margin-bottom: 5%;
+    margin-bottom: 4%;
 }
 
 .first-section {
@@ -70,10 +72,12 @@ section h3 {
     height: 100vh;
     color: white;
 }
+
 .card {
-    margin: 5px 50px 0 ;
+    margin: 5px 50px 0;
     background-color: transparent;
 }
+
 /*---------------------------------- Slide top class (taken from ANIMISTA)*/
 .slide-in-top {
     animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

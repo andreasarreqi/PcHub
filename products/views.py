@@ -1,9 +1,7 @@
 from django.shortcuts import render
-from .models import Computers
 
 
 def computers(request):
-    """
-    Computer views
-    """
+    """ A view to return the index page """
+
     return render(request, 'products/computers.html')
