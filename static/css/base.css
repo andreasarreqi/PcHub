@@ -54,7 +54,6 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(#e66465, #9198e5);
     height: 100vh;
 }
 
@@ -63,7 +62,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(0.25turn, #92a9b3, #70786a, #785633);
+    background: linear-gradient(0.25turn, #757ff0, #70786a, #785633);
     height: 100vh;
 }
 
@@ -76,7 +75,10 @@ a:hover {
     height: 100vh;
     color: white;
 }
-
+.card {
+    margin: 50px;
+    background-color: transparent;
+}
 /*---------------------------------- Slide top class (taken from ANIMISTA)*/
 .slide-in-top {
     animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -110,3 +112,5 @@ a:hover {
         opacity: 1;
     }
 }
+
+/*------------------------------------------ List styling */
