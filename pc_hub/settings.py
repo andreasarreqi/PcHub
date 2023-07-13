@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$ba3d6!^bz*78h##=hjnoi97!)xlvl7yzby-gt6axhby2x!)21
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-andreasarreqi-pchub-phtupk9074w.ws-eu101.gitpod.io']
+ALLOWED_HOSTS = ['8000-andreasarreqi-pchub-ljsrrs94llq.ws-eu101.gitpod.io']
 
 
 # Application definition
