@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Computers(models.Model):
+    """
+    The computers database model holding all the data descriping the computers
+    """
     name = models.CharField(max_length=250, null=False, blank=False)
     motherboard = models.CharField(max_length=250, null=False, blank=False)
     proccessor = models.CharField(max_length=250, null=False, blank=False)
@@ -20,6 +23,9 @@ class Computers(models.Model):
 
 
 class Laptops(models.Model):
+    """
+    The Laptops database model holding all the data descriping the laptops
+    """
     name = models.CharField(max_length=250, null=False, blank=False)
     motherboard = models.CharField(max_length=250, null=False, blank=False)
     proccessor = models.CharField(max_length=250, null=False, blank=False)
@@ -40,6 +46,9 @@ class Laptops(models.Model):
 
 
 class Monitors(models.Model):
+    """
+    The Monitors database model holding all the data descriping the monitors
+    """
     name = models.CharField(max_length=150, null=False, blank=False)
     screen_size = models.CharField(max_length=50, null=False, blank=False)
     in_stock = models.BooleanField(default=False, null=True, blank=True)

@@ -9,7 +9,11 @@
         <h1>Enhance your gaming performance with us</h1>
         <p> In the business since 2019 with a great range of expertise in the field of computer assenbling and fixing.
         </p>
-        <a href="#" class="btn lg bg-dark text-white">Shop Now</a>
+        <ul class="inline px-4">
+            <a href="{% url 'computers' %}" class="btn lg bg-dark text-white"> Buy PC</a>
+            <a href="{% url 'laptops' %}" class="btn lg bg-dark text-white"> Buy Laptop</a>
+            <a href="{% url 'monitors' %}" class="btn lg bg-dark text-white"> Buy Monitor</a>
+        </ul>
     </div>
 </section>
 
@@ -24,7 +28,8 @@
                     <img class="card-img-top" src=" {% static 'media/pc_image_test.png' %}" alt="image of a computer ">
                     <div class="card-body">
                         <h5 class="card-title">PC SHOP</h5>
-                        <p class="card-text">Providing the best service selling brand new Computers, Laptops, Monitors and
+                        <p class="card-text">Providing the best service selling brand new Computers, Laptops, Monitors
+                            and
                             accessories with the best quality in
                             the market and a fast delivery</p>
                     </div>

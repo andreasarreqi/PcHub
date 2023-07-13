@@ -3,5 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.computers, name='computers'),
+    path('computers', views.computers, name='computers'),
+    path('laptops', views.laptops, name='laptops'),
+    path('monitors', views.monitors, name='monitors'),
 ]
