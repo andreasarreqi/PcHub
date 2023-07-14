@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$ba3d6!^bz*78h##=hjnoi97!)xlvl7yzby-gt6axhby2x!)21'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-andreasarreqi-pchub-ljsrrs94llq.ws-eu101.gitpod.io']
+ALLOWED_HOSTS = ['8000-andreasarreqi-pchub-8irwd96wswk.ws-eu101.gitpod.io']
 
 
 # Application definition
@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     # APPS
     'home',
     'products',
+
+    # Allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
 ]
 
@@ -77,6 +82,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pc_hub.wsgi.application'
 
+SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
