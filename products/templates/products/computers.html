@@ -3,6 +3,46 @@
 
 {% block content%}
 
-<h4> hello</h4>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row g-0">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Computers</h2>
+        </div>
 
-{% endblock%}
+        <div class="container-fluid">
+            <div class="row g-0">
+
+                <!-- Computer posts -->
+                <div class="col-12 mt-3 left">
+                    <div class="row g-0">
+                        {% for computer in computers %}
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="image-container">
+                                        <img class="card-img-top" src=" {{ computer.image_url }}" alt="computer image">
+                                    </div>
+                                    <a href="#" class="post-link">
+                                        <h2 class="card-title">{{ computer.name }}</h2>
+                                    </a>
+                                    <p class="card-text"> Motherboard: {{ computer.motherboard }}</p>
+                                    <p class="card-text">Processor: {{ computer.proccessor }}</p>
+                                    <p class="card-text">Memory: {{ computer.memory }}</p>
+                                    <p class="card-text">Ram: {{ computer.ram }}</p>
+                                    <p class="card-text">Price: {{ computer.price }}</p>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:3 %}
+                    </div>
+                    <div class="row g-0">
+                        {% endif %}
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+            {% endblock%}

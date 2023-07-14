@@ -31,12 +31,12 @@ span i {
     font-size: 30px;
 }
 
-a {
+footer a {
     text-decoration: none;
     color: white;
 }
 
-a:hover {
+footer a:hover {
     color: blue;
 }
 
@@ -114,3 +114,28 @@ section h3 {
 }
 
 /*------------------------------------------ List styling */
+
+.container-fluid{
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+.container-fluid a {
+    text-decoration: none;
+    color:black;
+}
+
+.container-fluid a:hover {
+    font-size: larger;
+    color: blue;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
