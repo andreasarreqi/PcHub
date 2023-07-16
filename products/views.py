@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Computers
 
 
@@ -12,13 +12,13 @@ def computers(request):
     return render(request, 'products/computers.html', context)
 
 
-def laptops(request):
-    """ A view to return the laptops page """
+def computer_detail(request, computer_id):
+    """ A view to show individual product details """
 
-    return render(request, 'products/laptops.html')
+    computer = get_object_or_404(Computers, pk=computer_id)
 
+    context = {
+        'computer': computer,
+    }
 
-def monitors(request):
-    """ A view to return the monitors page """
-
-    return render(request, 'products/monitors.html')
+    return render(request, 'products/computer_detail.html', context)

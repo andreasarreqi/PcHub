@@ -21,12 +21,12 @@
                             <div class="card mb-4 h-100 border-0">
                                 <div class="card-body pb-0">
                                     {% if computer.image %}
-                                    <a href="#">
+                                    <a href="{% url 'computer_detail' computer.id %}">
                                         <img class="card-img-top img-fluid" src="{{ computer.image.url }}"
                                             alt="{{ computer.name }}">
                                     </a>
                                     {% else %}
-                                    <a href="#">
+                                    <a href="{% url 'computer_detail' computer.id %}">
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                             alt="{{ computer.name }}">
                                     </a>
