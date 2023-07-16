@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row g-0">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Computers</h2>
+            <h2 class="logo-font">Computers (  {{ computers|length }} )</h2>
         </div>
 
         <div class="container-fluid">
@@ -18,19 +18,28 @@
                     <div class="row g-0">
                         {% for computer in computers %}
                         <div class="col-md-4">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <div class="image-container">
-                                        <img class="card-img-top" src=" {{ computer.image_url }}" alt="computer image">
-                                    </div>
+                            <div class="card mb-4 h-100 border-0">
+                                <div class="card-body pb-0">
+                                    {% if computer.image %}
+                                    <a href="#">
+                                        <img class="card-img-top img-fluid" src="{{ computer.image.url }}"
+                                            alt="{{ computer.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="#">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                            alt="{{ computer.name }}">
+                                    </a>
+                                    {% endif %}
                                     <a href="#" class="post-link">
                                         <h2 class="card-title">{{ computer.name }}</h2>
                                     </a>
+                                    <p class="card-text">OS: {{ computer.operating_system }}</p>
                                     <p class="card-text"> Motherboard: {{ computer.motherboard }}</p>
                                     <p class="card-text">Processor: {{ computer.proccessor }}</p>
                                     <p class="card-text">Memory: {{ computer.memory }}</p>
                                     <p class="card-text">Ram: {{ computer.ram }}</p>
-                                    <p class="card-text">Price: {{ computer.price }}</p>
+                                    <p class="card-text">Price: EUR {{ computer.price }}</p>
                                     <hr>
                                 </div>
                             </div>
@@ -40,9 +49,11 @@
                     <div class="row g-0">
                         {% endif %}
                         {% endfor %}
-
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
 
-            {% endblock%}
+{% endblock%}
