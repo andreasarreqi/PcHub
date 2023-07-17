@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 /*--------------------------------------------- Footer styling*/
@@ -138,4 +138,27 @@ section h3 {
 	position: fixed;
 	background: white;
 	z-index: -1;
+}
+
+
+/*------------------------------------------- Media queries */
+@media only screen and (max-width: 360px) {
+    html {
+        overflow-x: hidden;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    .first-section p {
+        font-size: 12px;
+    }
+    .first-section a {
+        font-size: 15px;
+    }
+    .second-section{
+        height: 150vh;
+    }
+    .third-section{
+        height: 120vh;
+    }
 }
