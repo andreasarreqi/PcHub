@@ -61,7 +61,7 @@ section h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    height: 120vh;
 }
 
 .third-section {
@@ -115,14 +115,15 @@ section h3 {
 
 /*------------------------------------------ List styling */
 
-.container-fluid{
+.container-fluid {
     align-items: center;
     text-align: center;
     margin-top: 50px;
 }
+
 .container-fluid a {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 .container-fluid a:hover {
@@ -131,13 +132,13 @@ section h3 {
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
 }
 
 
@@ -146,19 +147,102 @@ section h3 {
     html {
         overflow-x: hidden;
     }
+
     h1 {
         font-size: 25px;
     }
+
     .first-section p {
         font-size: 12px;
     }
+
     .first-section a {
         font-size: 15px;
     }
-    .second-section{
+
+    .second-section {
         height: 150vh;
     }
-    .third-section{
+
+    .third-section {
         height: 120vh;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .first-section p {
+        font-size: 12px;
+    }
+
+    .first-section a {
+        font-size: 15px;
+    }
+
+    .second-section {
+        height: 150vh;
+    }
+
+    .third-section {
+        height: 130vh;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .first-section p {
+        font-size: 12px;
+    }
+
+    .first-section a {
+        font-size: 15px;
+    }
+
+    .second-section {
+        height: 120vh;
+    }
+
+    .third-section {
+        height: 110vh;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .first-section p {
+        font-size: 12px;
+    }
+
+    .first-section a {
+        font-size: 15px;
+    }
+
+    .second-section {
+        height: 120vh;
+    }
+
+    .third-section {
+        height: 110vh;
     }
 }
