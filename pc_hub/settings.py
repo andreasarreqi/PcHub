@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # APPS
     'home',
     'products',
+    'bag',
 
     # Allauth
     'allauth',
