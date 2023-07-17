@@ -23,11 +23,10 @@ main {
 /*--------------------------------------------- Footer styling*/
 footer {
     background-color: black;
-    font-size: 15px;
+    font-size: 12px;
     padding-left: 5%;
     width: 100%;
     bottom: 0;
-    margin-top: auto;
 }
 
 span i {
@@ -37,6 +36,10 @@ span i {
 footer a {
     text-decoration: none;
     color: white;
+}
+
+.useful-links a {
+    font-size: 19px;
 }
 
 footer a:hover {
@@ -217,6 +220,9 @@ h2 {
 
     .third-section {
         height: 120vh;
+    }
+    footer > children {
+        font-size: 5px;
     }
 }
 
