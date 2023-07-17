@@ -191,6 +191,22 @@ h2 {
     justify-content: center;
 }
 
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 75px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 8px;
+}
 
 /*------------------------------------------- Media queries */
 @media only screen and (max-width: 360px) {

@@ -84,14 +84,14 @@
                             <!--Add user options after-->
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                        <a href="#" class="dropdown-item">Product Management</a>
-                                    {% endif %}
+                                {% if request.user.is_superuser %}
+                                <a href="#" class="dropdown-item">Product Management</a>
+                                {% endif %}
                                 <a href="#" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                                 {% endif %}
                         </li>
                         <li class="list-inline-item">
@@ -111,6 +111,24 @@
         </nav>
     </header>
 
+    {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
     <!--Page content wrapped in a main tag-->
     <main>
         {% block content %}
@@ -118,21 +136,24 @@
     </main>
 
     {% block postloadjs %}
-    <!-- For Later (Messages/Toasts)-->
+    <!--(Messages/Toasts)-->
+        <script type="text/javascript">
+            $('.toast').toast('show');
+        </script>
     {% endblock %}
 
     <!--Footer-->
     <footer class="footer p-1 mt-auto py-3 dark-bg text-white">
         <div class="row">
             <div class="col-12 col-md-4 ps-2 text-start text-md-center">
-    
+
                 <h4 class="fw-bolder mb-3"> Opening Hours </h4>
                 <p> Monday-Friday 09:00-17:00</p>
                 <p> Saturday 10:00-15:00</p>
-    
+
             </div>
             <div class="useful-links col-12 col-md-4 ps-2 py-4 py-md-0 text-start text-md-center">
-    
+
                 <a class="navbar-brand" href="#" aria-label="footer link to FAQ">
                     FAQ</a>
                 <br>
@@ -140,7 +161,7 @@
                     Policy</a>
                 <br>
                 <a class="navbar-brand" href="#" aria-label="footer link to contact us page">Contact Us</a>
-    
+
             </div>
             <div class="col-12 col-md-4 ps-2 text-start text-md-center">
                 <h4 class="fw-bolder">Follow us</h4>
@@ -159,9 +180,6 @@
             </div>
         </div>
     </footer>
-
-
-
 </body>
 
 </html>
