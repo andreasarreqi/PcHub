@@ -8,6 +8,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 * {
@@ -19,12 +21,13 @@ main {
 }
 
 /*--------------------------------------------- Footer styling*/
-.footer {
+footer {
     background-color: black;
     font-size: 15px;
     padding-left: 5%;
     width: 100%;
     bottom: 0;
+    margin-top: auto;
 }
 
 span i {
@@ -61,7 +64,7 @@ section h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 120vh;
+    height: 110vh;
 }
 
 .third-section {
@@ -142,6 +145,12 @@ section h3 {
 }
 
 
+.text-left { 
+    padding: 20px;
+}
+
+
+
 /*------------------------------------------- Media queries */
 @media only screen and (max-width: 360px) {
     html {
@@ -149,7 +158,11 @@ section h3 {
     }
 
     h1 {
-        font-size: 25px;
+        font-size: 20px;
+    }
+
+    .h3 {
+        font-size: 20px;
     }
 
     .first-section p {
@@ -161,7 +174,7 @@ section h3 {
     }
 
     .second-section {
-        height: 150vh;
+        height: 160vh;
     }
 
     .third-section {

@@ -19,9 +19,14 @@
                 {% endif %}
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 text-left mt-3">
             <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ computer.name }}</p>
+                <p class="mb-0"> <strong> {{ computer.name }} </strong></p>
+                <p class="mb-0"> <strong> OS: </strong> {{ computer.operating_system }} </p>
+                <p class="mb-0"> <strong> Motherboard: </strong> {{ computer.motherboard }} </p>
+                <p class="mb-0"> <strong> Processor: </strong> {{ computer.proccessor }}</p>
+                <p class="mb-0"> <strong> Memory: </strong> {{ computer.memory }} </p>
+                <p class="mb-0"> <strong> Ram: </strong> {{ computer.ram }} </p>
                 <p class="lead mb-0 text-left font-weight-bold">EUR {{ computer.price }}</p>
                 {% if computer.rating %}
                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ computer.rating }} / 5</small>
@@ -62,11 +67,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'computers' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
+                                    <i class="fas fa-chevron-left small"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
