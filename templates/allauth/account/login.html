@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
+<h2>{% trans "Sign In" %}</h2>
 
 {% get_providers as socialaccount_providers %}
 
@@ -29,7 +29,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
+<p class="login-p">{% blocktrans %}If you have not created an account yet, then please
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 

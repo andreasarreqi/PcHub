@@ -144,14 +144,49 @@ section h3 {
     z-index: -1;
 }
 
-.signup {
-    margin-top: 3%;
-}
-
 .text-left { 
     padding: 20px;
 }
 
+/*---------------------------------- Register/Login/Logout Form styling */
+.signup {
+    margin: 6%;
+    padding: 25px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.login {
+    margin: 6%;
+    padding: 25px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.logout {
+    margin: 15%;
+    padding: 25px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+h2 {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.login-p,
+.logout-p,
+.signup-p {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
 
 
 /*------------------------------------------- Media queries */
