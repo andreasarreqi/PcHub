@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row g-0">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Computers (  {{ computers|length }} )</h2>
+            <h2 class="logo-font">Computers ( {{ computers|length }} )</h2>
         </div>
 
         <div class="container-fluid">
@@ -31,7 +31,7 @@
                                             alt="{{ computer.name }}">
                                     </a>
                                     {% endif %}
-                                    <a href="#" class="post-link">
+                                    <a href="{% url 'computer_detail' computer.id %}" class="post-link">
                                         <h2 class="card-title">{{ computer.name }}</h2>
                                     </a>
                                     <p class="card-text">OS: {{ computer.operating_system }}</p>
@@ -40,6 +40,18 @@
                                     <p class="card-text">Memory: {{ computer.memory }}</p>
                                     <p class="card-text">Ram: {{ computer.ram }}</p>
                                     <p class="card-text">Price: EUR {{ computer.price }}</p>
+                                    {% if product.rating %}
+                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ computer.rating }} /
+                                            5</small>
+                                    {% else %}
+                                        <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="#">Edit</a> |
+                                        <a class="text-danger" href="#">Delete</a>
+                                    </small>
+                                    {% endif %}
                                     <hr>
                                 </div>
                             </div>
