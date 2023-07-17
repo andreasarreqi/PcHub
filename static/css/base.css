@@ -144,6 +144,9 @@ section h3 {
     z-index: -1;
 }
 
+.signup {
+    margin-top: 3%;
+}
 
 .text-left { 
     padding: 20px;
