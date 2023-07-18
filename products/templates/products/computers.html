@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content%}
-
+<!-- Section that contains all the products of the database-->
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row g-0">
@@ -43,12 +43,12 @@
                                     <a href="{% url 'computer_detail' computer.id %}" class="post-link">
                                         <h2 class="card-title">{{ computer.name }}</h2>
                                     </a>
-                                    <p class="card-text">OS: {{ computer.operating_system }}</p>
-                                    <p class="card-text"> Motherboard: {{ computer.motherboard }}</p>
-                                    <p class="card-text">Processor: {{ computer.proccessor }}</p>
-                                    <p class="card-text">Memory: {{ computer.memory }}</p>
-                                    <p class="card-text">Ram: {{ computer.ram }}</p>
-                                    <p class="card-text">Price: EUR {{ computer.price }}</p>
+                                    <p class="card-text"><strong>OS:</strong> {{ computer.operating_system }}</p>
+                                    <p class="card-text"> <strong>Motherboard: </strong>{{ computer.motherboard }}</p>
+                                    <p class="card-text"><strong>Processor: </strong>{{ computer.proccessor }}</p>
+                                    <p class="card-text"><strong>Memory: </strong>{{ computer.memory }}</p>
+                                    <p class="card-text"><strong>Ram: </strong>{{ computer.ram }}</p>
+                                    <p class="card-text"><strong>Price: EUR {{ computer.price }}</strong></p>
                                     {% if product.rating %}
                                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ computer.rating }} /
                                             5</small>

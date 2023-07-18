@@ -147,7 +147,7 @@ section h3 {
     z-index: -1;
 }
 
-.text-left { 
+.text-left {
     padding: 20px;
 }
 
@@ -175,6 +175,7 @@ section h3 {
     text-align: center;
     justify-content: center;
 }
+
 h2 {
     margin-top: 10%;
     display: flex;
@@ -241,7 +242,8 @@ h2 {
     .third-section {
         height: 120vh;
     }
-    footer > children {
+
+    footer>children {
         font-size: 5px;
     }
 }
@@ -296,6 +298,7 @@ h2 {
     .third-section {
         height: 110vh;
     }
+
     .logout-p {
         margin-top: 21.5%;
     }
