@@ -13,24 +13,23 @@ def bag_contents(request):
 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
-            product = get_object_or_404(Computers, pk=item_id)
-            total += item_data * product.price
-            product_count += item_data
+            computer = get_object_or_404(Computers, pk=item_id)
+            total += item_data * computer.price
+            computer_count += item_data
             bag_items.append({
                 'item_id': item_id,
                 'quantity': item_data,
-                'product': product,
+                'computer': computer,
             })
         else:
-            product = get_object_or_404(Computers, pk=item_id)
-            for size, quantity in item_data['items_by_size'].items():
-                total += quantity * product.price
-                product_count += quantity
+            computer = get_object_or_404(Computers, pk=item_id)
+            for quantity in item_data.items():
+                total += quantity * computer.price
+                computer_count += quantity
                 bag_items.append({
                     'item_id': item_id,
                     'quantity': quantity,
-                    'product': product,
-                    'size': size,
+                    'computer': computer,
                 })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
