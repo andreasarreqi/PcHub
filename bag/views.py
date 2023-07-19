@@ -14,35 +14,17 @@ def view_bag(request):
 
 
 def add_to_bag(request, item_id):
-    """
-    Adds product to bag,
-    Updates bag with product and product quantity.
-    """
-    computer = get_object_or_404(Computers, id=item_id)
+    """ Add a product to the shopping bag """
+
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
-    try:
-        if item_id in list(bag.keys()):
-            if computer.quantity >= bag[item_id] + quantity:
-                bag[item_id] += quantity
-                messages.success(
-                    request, f'{computer.name} succesfully added to bag!')
-            else:
-                messages.error(
-                    request,
-                    f'Sorry, only {computer.quantity}\
-                        of these are curently available.\
-                        You have {bag[item_id]} in your cart already.')
-        else:
-            bag[item_id] = quantity
-            messages.success(
-                    request, f'{computer.name} succesfully added to bag!')
-    except RuntimeError:
-        messages.error(
-            request,
-            "Whoops, We've encountered a problem, we'll get straight onto it,\
-                in the meantime you could always try again??")
+
+    if item_id in list(bag.keys()):
+        bag[item_id] += quantity
+    else:
+        bag[item_id] = quantity
 
     request.session['bag'] = bag
+
     return redirect(redirect_url)
