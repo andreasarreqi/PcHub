@@ -119,6 +119,11 @@ section h3 {
     }
 }
 
+/*------------------------------------------ Update/Delete buttons*/
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 /*------------------------------------------ List styling */
 
 .container-fluid {
