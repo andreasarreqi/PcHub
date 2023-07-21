@@ -140,7 +140,7 @@
             </div>
             {% else %}
             <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'computers' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <a href="{% url 'computers' %}" class="btn btn-outline-black rounded-0 btn-lg bg-dark text-white">
                 <span class="icon">
                     <i class="fas fa-chevron-left small"></i>
                 </span>
@@ -154,8 +154,8 @@
 
 {% block postloadjs %}
 {{ block.super }}
-
 {% include 'products/includes/quantity_input_script.html' %}
+
 <script>
     // Update quantity on click
     $('.update-link').click(function (e) {
