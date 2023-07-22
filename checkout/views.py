@@ -13,7 +13,7 @@ from products.models import Computers
 from profiles.forms import UserProfileForm """
 from bag.contexts import bag_contents
 
-"""import stripe"""
+import stripe
 
 
 @require_POST
