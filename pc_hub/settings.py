@@ -67,7 +67,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'pc_hub.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4.4'
 
 TEMPLATES = [
     {

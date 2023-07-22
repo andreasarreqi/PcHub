@@ -11,6 +11,11 @@ class Order(models.Model):
     The order model contains the order details.
     Describing the files in the database.
     """
+    """
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+    null=True, blank=True, related_name='orders') FOR LATER
+    """
+    order_number = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
