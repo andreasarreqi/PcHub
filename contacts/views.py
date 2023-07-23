@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from contacts.models import Contact, PcTechnician
+from django.shortcuts import render, redirect
+from django.views import generic, View
+from .forms import ContactForm, PcTechnicianForm
+from .models import Contact, PcTechnician
+from django.contrib import messages
 
 
 class ContactUs(View):
@@ -44,7 +47,7 @@ class ContactTechnician(View):
 
     model = PcTechnician
     template_name = 'pc_technician.html'
-    form_class = ContactForm
+    form_class = PcTechnicianForm
     success_url = '/'
 
     def get(self, request):

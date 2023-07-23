@@ -23,7 +23,7 @@ class PcTechnician(models.Model):
     """
     name = models.CharField(max_length=200)
     email = models.EmailField(max_length=254)
-    computer_type = models.Charfield(max_length=254)
+    computer_type = models.CharField(max_length=254)
     message = models.TextField()
     sent = models.DateTimeField(auto_now=True)
 
