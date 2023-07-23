@@ -61,7 +61,7 @@ def checkout(request):
             order.save()
             for item_id, item_data in bag.items():
                 try:
-                    product = Product.objects.get(id=item_id)
+                    product = Computers.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
@@ -77,7 +77,7 @@ def checkout(request):
                                 quantity=quantity,
                             )
                             order_line_item.save()
-                except Product.DoesNotExist:
+                except Computers.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag"
                         "wasn't found in our database."
@@ -98,7 +98,7 @@ def checkout(request):
         if not bag:
             messages.error(
                 request, "There's nothing in your bag at the moment")
-            return redirect(reverse('products'))
+            return redirect(reverse('computers'))
 
         current_bag = bag_contents(request)
         total = current_bag['grand_total']

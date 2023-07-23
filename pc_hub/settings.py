@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-andreasarreqi-pchub-p2i2c5l4p5t.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['8000-andreasarreqi-pchub-ainii3utc1p.ws-eu102.gitpod.io']
 
 
 # Application definition
@@ -67,7 +67,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'pc_hub.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4.4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {

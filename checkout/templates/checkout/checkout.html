@@ -39,7 +39,7 @@
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' item.product.id %}">
+                            <a href="{% url 'computer_detail' item.product.id %}">
                                 {% if item.product.image %}
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
@@ -113,7 +113,7 @@
                     <div class="submit-button text-right mt-5 mb-2">                    
 						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
 							<span class="icon">
-								<i class="fas fa-chevron-left"></i>
+								<i class="fas fa-chevron-left small"></i>
 							</span>
 							<span class="font-weight-bold">Adjust Bag</span>
 						</a>
