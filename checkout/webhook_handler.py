@@ -4,8 +4,7 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
 from .models import Order, OrderLineItem
-from store.models import Computers
-from profiles.models import AccountProfile
+from products.models import Computers
 
 import stripe
 import json
@@ -76,8 +75,10 @@ class StripeWH_Handler:
                 profiles.default_country = shipping_details.address.country
                 profiles.default_eircode = shipping_details.address.postal_code
                 profiles.default_town_or_city = shipping_details.address.city
-                profiles.default_street_address1 = shipping_details.address.line1
-                profiles.default_street_address2 = shipping_details.address.line2
+                profiles.default_street_address1 = (
+                    shipping_details.address.line1)
+                profiles.default_street_address2 = (
+                    shipping_details.address.line2)
                 profiles.default_county = shipping_details.address.state
                 profiles.save()
 
