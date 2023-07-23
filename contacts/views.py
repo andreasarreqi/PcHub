@@ -40,7 +40,7 @@ class ContactUs(View):
         return render(request, 'contact.html', context)
 
 
-class ContactTechnician(View):
+class Technician(View):
     """
     The ContactUs view which allows the user to send a message to the admin
     """
