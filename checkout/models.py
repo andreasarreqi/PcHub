@@ -4,6 +4,7 @@ from django.db.models import Sum
 from django.conf import settings
 from django_countries.fields import CountryField
 from products.models import Computers
+from profiles.models import UserProfile
 
 
 class Order(models.Model):
@@ -11,10 +12,12 @@ class Order(models.Model):
     The order model contains the order details.
     Describing the files in the database.
     """
-    """
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-    null=True, blank=True, related_name='orders') FOR LATER
-    """
+
+    user_profile = models.ForeignKey(
+        UserProfile,
+        on_delete=models.SET_NULL, null=True, blank=True,
+        related_name='orders'
+        )
     order_number = models.CharField(max_length=32, null=True, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
@@ -24,6 +27,7 @@ class Order(models.Model):
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    CountryField(blank_label='Country *', null=False, blank=False)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(
