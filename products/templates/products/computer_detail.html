@@ -44,7 +44,7 @@
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a href="#">Edit</a> |
-                    <a class="text-danger" href="#">Delete</a>
+                    <a class="text-danger" href="{% url 'edit_computer' %}">Delete</a>
                 </small>
                 {% endif %}
                 <form class="form" action="{% url 'add_to_bag' computer.id %}" method="POST">

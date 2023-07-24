@@ -39,7 +39,7 @@ def add_computer(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('computer_detail', args=[product.id]))
         else:
             messages.error(
                 request,
@@ -48,7 +48,7 @@ def add_computer(request):
     else:
         form = ProductForm()
 
-    template = 'products/add_product.html'
+    template = 'products/add_computer.html'
     context = {
         'form': form,
     }
