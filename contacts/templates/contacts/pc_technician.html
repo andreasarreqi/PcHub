@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% load static %}
+
+
+<!-- a form allow user to contact the site owner page -->
+<div class="container form">
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <h3 class="text-center my-5">PC Technician</h3>
+            <hr>
+            <form action="{% url 'pc_technician' %}" method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-center">
+                    <button type="submit" class="btn btn-signup btn-lg mt-4 mb-3 bg-dark text-white">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

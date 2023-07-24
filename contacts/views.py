@@ -37,7 +37,7 @@ class ContactUs(View):
             return redirect('/')
         else:
             form = ContactForm()
-        return render(request, 'contact.html', context)
+        return render(request, 'contacts/contact.html', context)
 
 
 class Technician(View):
@@ -56,7 +56,7 @@ class Technician(View):
         """
 
         context = {'form': PcTechnicianForm()}
-        return render(request, 'pc_technician.html', context)
+        return render(request, 'contacts/pc_technician.html', context)
 
     def post(self, request):
         """
@@ -72,4 +72,4 @@ class Technician(View):
             return redirect('/')
         else:
             form = PcTechnicianForm()
-        return render(request, 'pc_technician.html', context)
+        return render(request, 'contacts/pc_technician.html', context)
