@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Computers
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from .forms import ProductForm
 
 
 def computers(request):
@@ -27,7 +28,7 @@ def computer_detail(request, computer_id):
 
 
 @login_required
-def add_product(request):
+def add_computer(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -96,5 +97,5 @@ def delete_computer(request, product_id):
 
     product = get_object_or_404(Computers, pk=product_id)
     product.delete()
-    messages.success(request, 'Product deleted!')
+    messages.success(request, 'Computer deleted!')
     return redirect(reverse('products'))
