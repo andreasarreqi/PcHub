@@ -21,7 +21,7 @@ class ContactUs(View):
         """
 
         context = {'form': ContactForm()}
-        return render(request, 'contact.html', context)
+        return render(request, 'contacts/contact.html', context)
 
     def post(self, request):
         """
