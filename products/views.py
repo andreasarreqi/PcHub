@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Computers
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import ProductForm
+from .forms import ComputerForm
 
 
 def computers(request):
@@ -35,7 +35,7 @@ def add_computer(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+        form = ComputerForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
@@ -46,7 +46,7 @@ def add_computer(request):
                 'Failed to add product. Please ensure the form is valid.'
                 )
     else:
-        form = ProductForm()
+        form = ComputerForm()
 
     template = 'products/add_computer.html'
     context = {
@@ -65,7 +65,7 @@ def edit_computer(request, product_id):
 
     product = get_object_or_404(Computers, pk=product_id)
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, instance=product)
+        form = ComputerForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated computer!')
@@ -97,5 +97,6 @@ def delete_computer(request, product_id):
 
     product = get_object_or_404(Computers, pk=product_id)
     product.delete()
-    messages.success(request, 'Computer deleted!')
-    return redirect(reverse('products'))
+    messages.success(request,
+                     f'{ product.name } was deleted! from the store')
+    return redirect(reverse('computers'))
