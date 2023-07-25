@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    'pchub-herokuapp.com',
+    'pchub.herokuapp.com',
     '8000-andreasarreqi-pchub-r5wwga8f24y.ws-eu102.gitpod.io'
     ]
 
