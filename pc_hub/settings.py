@@ -28,7 +28,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     'pchub.herokuapp.com',
-    '8000-andreasarreqi-pchub-r5wwga8f24y.ws-eu102.gitpod.io'
+    '8000-andreasarreqi-pchub-87gdy36owox.ws-eu102.gitpod.io'
     ]
 
 
