@@ -2,9 +2,15 @@
 {% load static %}
 
 {% block content %}
-<div class="container form offset-md-2 my-6">
-    <h1>500 Internal Server Error</h1>
-    <p>Don't worry, this is us not you!</p>
 
-    <a href="{% url 'home' %}" class="btn btn-signup btn-lg bg-dark text-white">Home</a>
+<div class="container">
+    <h2>500 Internal Server Error</h2>
+    <p class="login-p">Don't worry, this is us not you!</p>
+    <div class="row">
+        <div class="col text-center">
+            <a href="{% url 'home' %}" class="btn btn-default btn-lg bg-dark text-white">Home</a>
+        </div>
+    </div>
 </div>
+
+{% endblock %}
