@@ -13,6 +13,9 @@ from pathlib import Path
 import os
 import dj_database_url
 
+if os.path.exists("env.py"):
+    import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,11 +27,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'pchub-ac046d943cba.herokuapp.com',
-    '8000-andreasarreqi-pchub-87gdy36owox.ws-eu102.gitpod.io'
+    '8000-andreasarreqi-pchub-f5coxokl5ap.ws-eu102.gitpod.io'
     ]
 
 
