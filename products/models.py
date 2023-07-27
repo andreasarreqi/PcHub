@@ -36,23 +36,3 @@ class Monitors(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     description = models.CharField(max_length=500, null=True, blank=True)
-
-
-class Reviews(models.Model):
-    """
-    The review class defining all the database structure of the model
-    """
-    post = models.ForeignKey(Computers,
-                             on_delete=models.CASCADE,
-                             related_name="comments")
-    name = models.ForeignKey(User,
-                             on_delete=models.CASCADE,
-                             related_name="user")
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ["created_on"]
-
-    def __str__(self):
-        return f"Comment {self.body} by {self.name}"

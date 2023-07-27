@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Computers, Reviews
+from .models import Computers
 
 
 class ComputerForm(forms.ModelForm):
@@ -17,12 +17,3 @@ class ComputerForm(forms.ModelForm):
 
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
-
-
-class ReviewForm(forms.ModelForm):
-    """
-    ReviewForm allows the user to comment on a blog post
-    """
-    class Meta:
-        model = Reviews
-        fields = ('body',)

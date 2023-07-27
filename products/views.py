@@ -20,24 +20,8 @@ def computer_detail(request, computer_id):
 
     computer = get_object_or_404(Computers, pk=computer_id)
 
-    def post(self, request, slug, *args, **kwargs):
-        queryset = Computers.objects.filter(status=1)
-        post = get_object_or_404(queryset)
-        comments = post.comments.order_by("-created_on")
-
-        review_form = ReviewForm(data=request.POST)
-        if review_form.is_valid():
-            review_form.instance.email = request.user.email
-            review_form.instance.name = request.user.username
-            review = review_form.save(commit=False)
-            review.post = post
-            review.save()
-        else:
-            review_form = ReviewForm()
-
     context = {
         'computer': computer,
-        'review': review,
     }
 
     return render(request, 'products/computer_detail.html', context)
