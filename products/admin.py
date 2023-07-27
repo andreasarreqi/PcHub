@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Computers, Monitors
+from .models import Computers
 
 
 @admin.register(Computers)
@@ -11,18 +11,6 @@ class ComputersAdmin(admin.ModelAdmin):
         'proccessor',
         'ram',
         'memory',
-        'image',
-    )
-
-    ordering = ('price',)
-
-
-@admin.register(Monitors)
-class MonitorsAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'price',
-        'screen_size',
         'image',
     )
 
