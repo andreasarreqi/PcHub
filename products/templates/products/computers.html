@@ -49,12 +49,6 @@
                                     <p class="card-text"><strong>Memory: </strong>{{ computer.memory }}</p>
                                     <p class="card-text"><strong>Ram: </strong>{{ computer.ram }}</p>
                                     <p class="card-text"><strong>Price: € {{ computer.price }}</strong></p>
-                                    {% if product.rating %}
-                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ computer.rating }} /
-                                            5</small>
-                                    {% else %}
-                                        <small class="text-muted">No Rating</small>
-                                    {% endif %}
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a href="{% url 'edit_computer' computer.id  %}">Edit</a> |

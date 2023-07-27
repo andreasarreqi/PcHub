@@ -37,6 +37,18 @@ def monitors(request):
     return render(request, 'products/monitors.html', context)
 
 
+def monitor_detail(request, monitor_id):
+    """ A view to show individual monitors """
+
+    monitors = get_object_or_404(Monitors, pk=monitor_id)
+
+    context = {
+        'monitors': monitors,
+    }
+
+    return render(request, 'products/monitors_detail.html', context)
+
+
 @login_required
 def add_computer(request):
     """ Add a product to the store """

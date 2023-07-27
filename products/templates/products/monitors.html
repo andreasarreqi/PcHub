@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content%}
+<!-- Section that contains all the products of the database-->
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row g-0">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Monitors ( {{ monitors|length }} )</h2>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row g-0">
+
+                <!-- Computer posts -->
+                <div class="col-12 mt-3 left">
+                    <div class="row g-0">
+                        {% for monitor in monitors %}
+                        <div class="col-md-4">
+                            <div class="card mb-4 h-100 border-0">
+                                <div class="card-body pb-0">
+                                    {% if monitor.image %}
+                                    <a href="{% url 'monitor_detail' monitor.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ monitor.image.url }}"
+                                            alt="{{ monitor.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="#">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                            alt="{{ monitor.name }}">
+                                    </a>
+                                    {% endif %}
+                                    <a href="{% url 'monitor_detail' monitor.id %}" class="post-link">
+                                        <h2 class="card-title">{{ monitor.name }}</h2>
+                                    </a>
+                                    <p class="card-text"><strong>Name: {{ monitor.name }}</strong></p>
+                                    <p class="card-text"><strong>Display: {{ monitor.screen_size }}</strong></p>
+                                    <p class="card-text"><strong>Description:{{ monitor.description }}</strong></p>
+                                    <p class="card-text"><strong>Price: €{{ monitor.price }}</strong></p>
+                                    {% if products.rating %}
+                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ monitor.rating }} /
+                                            5</small>
+                                    {% else %}
+                                        <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="#">Edit</a> |
+                                        <a class="text-danger" href="#">Delete</a>
+                                    </small>
+                                    {% endif %}
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:3 %}
+                    </div>
+                    <div class="row g-0">
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}
