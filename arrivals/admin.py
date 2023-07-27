@@ -1,3 +1,13 @@
 from django.contrib import admin
+from .models import Arrivals
 
-# Register your models here.
+
+@admin.register(Arrivals)
+class ArrivalsAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'product_type',
+        'price',
+    )
+
+    ordering = ('name',)
