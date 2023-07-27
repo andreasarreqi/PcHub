@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import Computers
+from .models import Computers, Monitors
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import ComputerForm
@@ -25,6 +25,16 @@ def computer_detail(request, computer_id):
     }
 
     return render(request, 'products/computer_detail.html', context)
+
+
+def monitors(request):
+    """ A view to return the computers page """
+    monitors = Monitors.objects.all()
+
+    context = {
+        'monitors': monitors,
+    }
+    return render(request, 'products/monitors.html', context)
 
 
 @login_required
