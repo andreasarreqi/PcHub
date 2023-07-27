@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content%}
+<!-- Section that contains all the products of the database-->
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row g-0">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Computers ( {{ computers|length }} )</h2>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row g-0">
+
+                <!-- Arrivals posts -->
+                <div class="col-12 mt-3 left">
+                    <div class="row g-0">
+                        {% for arrival in arrivals %}
+                        <div class="col-sm-8">
+                            <div class="row card sm-4 h-100 border-0">
+                                <div class="card-body pb-0">
+                                    {% if arrival.image %}
+                                    <a href="{% url 'computer_detail' computer.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ computer.image.url }}"
+                                            alt="{{ computer.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'computer_detail' computer.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                            alt="{{ computer.name }}">
+                                    </a>
+                                    {% endif %}
+                                    <a href="{% url 'computer_detail' computer.id %}" class="post-link">
+                                        <h2 class="card-title">{{ arrival.name }}</h2>
+                                    </a>
+                                    <p class="card-text"> <strong>Product Type: </strong>{{ arrival.product_type }}</p>
+                                    <p class="card-text"><strong>Product Description: </strong>{{ arrival.product_description }}</p>
+                                    <p class="card-text"><strong>Price: € {{ arrival.price }}</strong></p>
+                                    
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:1 %}
+                    </div>
+                    <div class="row g-0">
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}
