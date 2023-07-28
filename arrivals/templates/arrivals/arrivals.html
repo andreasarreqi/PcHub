@@ -12,48 +12,49 @@
 
 {% block content%}
 <!-- Section that contains all the products of the database-->
-<div class="overlay"></div>
 <div class="container-fluid">
-    <div class="row g-0">
+    <div class="justify-content-md-center">
         <div class="col text-center mt-3">
             <h3 class="my-2">Arrivals</h3>
+            <P> Arriving in our store soon...</P>
         </div>
-        <div class="col-12 mt-3 left">
-            <div class="row g-0">
-                {% for arrival  in arrivals %}
+        <div class="mt-3 text-center col-4.order-1">
+            {% for arrival  in arrivals %}
+
+            <div class="card-inner">
+                <div class="card-face card-face-front">
+                    <h2> Product Name: {{ arrival.name }}</h2>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 100rem;">
+                <div class="row no-gutters">
                     <div class="col-md-4">
-                        <p> ahsdhjdashjda
-                            shjadsjhadsajh
-                            sdadsjhdashjad
-                            hjadsjhsdjhasd
-                            jhasdjhasdhjas
-                            dhjsdasdhjadsh
-                            jdasadjshhj.ll
-                        </p>
-                        <div class="card mb-4 h-100 border-0">
-                            <div class="card-body pb-0">
-                                {% if arrival.image %}
-                                <img class="card-img-top img-fluid" src="{{ arrival.image.url }}" alt="{{ arrival.name }}">
-                                {% else %}
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                    alt="{{ arrival.name }}">
-                                {% endif %}
-                                <h2 class="card-title">{{ arrival.name }}</h2>
-                                <p class="card-text"><strong>OS:</strong> {{ arrival.product_type }}</p>
-                                <p class="card-text"> <strong>Motherboard: </strong>{{ arrival.motherboard }}</p>
-                                <p class="card-text"><strong>Ram: </strong>{{ arrival.product_description }}</p>
-                                <p class="card-text"><strong>Price: € {{ arrival.price }}</strong></p>
-                                <hr>
-                            </div>
+                        {% if arrival.image %}
+                        <img class=" img-fluid" src="{{ arrival.image.url }}" alt="{{ arrival..name }}">
+                        {% else %}
+                        <img class=" img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ arrival.name }}">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body bg-dark text-white ">
+                            <h5 class="card-title">Product Name: {{ arrival.name }}</h5>
+                            <p class="card-text">Product type: {{arrival.product_type}}</p>
+                            <p class="card-text"> Product type: {{arrival.product_type}} </p>
+                            <p class="card-text"> Product type: {{arrival.product_type}} </p>
+                            <p class="card-text"> Product type: {{arrival.product_type}} </p>
+                            <p class="card-text"><small class="text-muted">Arriving in store Soon!!</small></p>
                         </div>
                     </div>
-                    {% if forloop.counter|divisibleby:3 %}
                 </div>
-                <div class="row g-0">
-                    {% endif %}
-                {% endfor %}
             </div>
         </div>
+        {% if forloop.counter|divisibleby:1 %}
+        <div>
+            {% endif %}
+            {% endfor %}
+        </div>
     </div>
+</div>
 </div>
 {% endblock%}

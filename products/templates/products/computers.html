@@ -31,12 +31,12 @@
                                 <div class="card-body pb-0">
                                     {% if computer.image %}
                                     <a href="{% url 'computer_detail' computer.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ computer.image.url }}"
+                                        <img class=" img-thumbnail card-img-top img-fluid" src="{{ computer.image.url }}"
                                             alt="{{ computer.name }}">
                                     </a>
                                     {% else %}
                                     <a href="{% url 'computer_detail' computer.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                        <img class="img-thumbnail card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                             alt="{{ computer.name }}">
                                     </a>
                                     {% endif %}

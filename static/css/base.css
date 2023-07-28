@@ -84,12 +84,10 @@ section h3 {
     margin: 5px 50px 0;
     background-color: transparent;
 }
-
 /*---------------------------------- Slide top class (taken from ANIMISTA)*/
 .slide-in-top {
     animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
 
 @keyframes slide-in-top {
     0% {
