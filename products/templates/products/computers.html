@@ -3,11 +3,11 @@
 
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content%}
@@ -31,30 +31,34 @@
                                 <div class="card-body pb-0">
                                     {% if computer.image %}
                                     <a href="{% url 'computer_detail' computer.id %}">
-                                        <img class=" img-thumbnail card-img-top img-fluid" src="{{ computer.image.url }}"
-                                            alt="{{ computer.name }}">
+                                        <img class=" img-thumbnail card-img-top img-fluid"
+                                            src="{{ computer.image.url }}" alt="{{ computer.name }}">
                                     </a>
                                     {% else %}
                                     <a href="{% url 'computer_detail' computer.id %}">
-                                        <img class="img-thumbnail card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                            alt="{{ computer.name }}">
+                                        <img class="img-thumbnail card-img-top img-fluid"
+                                            src="{{ MEDIA_URL }}noimage.png" alt="{{ computer.name }}">
                                     </a>
                                     {% endif %}
-                                    <a href="{% url 'computer_detail' computer.id %}" class="post-link">
-                                        <h2 class="card-title">{{ computer.name }}</h2>
-                                    </a>
-                                    <p class="card-text"><strong>OS:</strong> {{ computer.operating_system }}</p>
-                                    <p class="card-text"> <strong>Motherboard: </strong>{{ computer.motherboard }}</p>
-                                    <p class="card-text"><strong>Processor: </strong>{{ computer.proccessor }}</p>
-                                    <p class="card-text"><strong>Memory: </strong>{{ computer.memory }}</p>
-                                    <p class="card-text"><strong>Ram: </strong>{{ computer.ram }}</p>
-                                    <p class="card-text"><strong>Price: € {{ computer.price }}</strong></p>
-                                    {% if request.user.is_superuser %}
-                                    <small class="ml-3">
-                                        <a href="{% url 'edit_computer' computer.id  %}">Edit</a> |
-                                        <a class="text-danger" href="{% url 'delete_computer' computer.id  %}">Delete</a>
-                                    </small>
-                                    {% endif %}
+                                    <div class="bg-dark text-white">
+                                        <a href="{% url 'computer_detail' computer.id %}" class="post-link text-white">
+                                            <h2 class="card-title">{{ computer.name }}</h2>
+                                        </a>
+                                        <p class="card-text"><strong>OS:</strong> {{ computer.operating_system }}</p>
+                                        <p class="card-text"> <strong>Motherboard: </strong>{{ computer.motherboard }}
+                                        </p>
+                                        <p class="card-text"><strong>Processor: </strong>{{ computer.proccessor }}</p>
+                                        <p class="card-text"><strong>Memory: </strong>{{ computer.memory }}</p>
+                                        <p class="card-text"><strong>Ram: </strong>{{ computer.ram }}</p>
+                                        <p class="card-text"><strong>Price: € {{ computer.price }}</strong></p>
+                                        {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_computer' computer.id  %}" class="text-white">Edit</a> |
+                                            <a class="text-danger"
+                                                href="{% url 'delete_computer' computer.id  %}">Delete</a>
+                                        </small>
+                                        {% endif %}
+                                    </div>
                                     <hr>
                                 </div>
                             </div>
