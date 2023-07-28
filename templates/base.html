@@ -90,6 +90,7 @@
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                                 {% endif %}
+                            </div>
                         </li>
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
@@ -142,7 +143,6 @@
     {% block postloadjs %}
 
     <!--(Messages/Toasts)-->
-    <script src="{% static 'js/script.js' %}" defer></script>
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
