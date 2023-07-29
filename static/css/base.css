@@ -80,7 +80,7 @@ section h3 {
 }
 
 .card {
-    margin: 5px 50px 0;
+    margin: 5px 30px 0;
     background-color: transparent;
 }
 /*---------------------------------- Slide top class (taken from ANIMISTA)*/
@@ -272,11 +272,9 @@ h2 {
 
     .second-section {
         height: 150vh;
-        margin: 5rem 0 5rem 0;
     }
 
     .third-section {
-        margin-top: 5rem;
         height: 130vh;
     }
 }
