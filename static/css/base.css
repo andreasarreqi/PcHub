@@ -251,6 +251,12 @@ h2 {
     footer>children {
         font-size: 5px;
     }
+    .card-title { 
+        font-size: 20px;
+    }
+    .card-text { 
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -276,6 +282,12 @@ h2 {
 
     .third-section {
         height: 130vh;
+    }
+    .card-title { 
+        font-size: 20px;
+    }
+    .card-text { 
+        font-size: 16px;
     }
 }
 
@@ -306,6 +318,12 @@ h2 {
 
     .logout-p {
         margin-top: 21.5%;
+    }
+    .card-title { 
+        font-size: 20px;
+    }
+    .card-text { 
+        font-size: 16px;
     }
 }
 
