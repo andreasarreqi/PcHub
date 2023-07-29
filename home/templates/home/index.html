@@ -18,35 +18,40 @@
 <section class="second-section">
     <div class="slide-in-left d-sm">
         <h3> Our Services</h3>
-        <ul class="list-inline list-inline-horizontal-lg">
-            <li class="list-inline-item ">
-                <!--PC shop card-->
-                <div class="card px-4" style="width: 18rem;">
-                    <img class="img-thumbnail card-img-top" src=" {% static 'media/pc_image_test.png' %}" alt="image of a computer ">
-                    <div class="card-body">
-                        <h5 class="card-title">PC SHOP</h5>
-                        <p class="card-text"> Providing the best service selling brand new Computers, Laptops, Monitors
-                            with the best quality and lastest technologies in
-                            the market and fast delivery </p>
+        <div class="container-sm">
+            <ul class="list-inline list-inline-horizontal-lg">
+                <li class="list-inline-item ">
+                    <!--PC shop card-->
+                    <div class="card px-4" style="width: 18rem;">
+                        <img class="img-thumbnail card-img-top" src=" {% static 'media/pc_image_test.png' %}"
+                            alt="image of a computer ">
+                        <div class="card-body">
+                            <h5 class="card-title">PC SHOP</h5>
+                            <p class="card-text"> Providing the best service selling brand new Computers, Laptops,
+                                Monitors
+                                with the best quality and lastest technologies in
+                                the market and fast delivery </p>
                             <a href="{% url 'computers' %}" class="btn btn-lg bg-dark text-white"> Order Now</a>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
 
-            <!--PC technician card-->
-            <li class="list-inline-item">
-                <div class="card px-4" style="width: 18rem;">
-                    <img class="img-thumbnail card-img-top" src="{% static 'media/pc_fix_image.png' %}"
-                        alt="image of a monitor and fixing tools">
-                    <div class="card-body">
-                        <h5 class="card-title">PC Technician</h5>
-                        <p class="card-text">Our technicians are proffessionals with over 10+ years experience in the
-                            field of making lives easier</p>
-                        <a href="{% url 'pc_technician' %}" class="btn lg bg-dark text-white">Book Now</a>
+                <!--PC technician card-->
+                <li class="list-inline-item">
+                    <div class="card px-4" style="width: 18rem;">
+                        <img class="img-thumbnail card-img-top" src="{% static 'media/pc_fix_image.png' %}"
+                            alt="image of a monitor and fixing tools">
+                        <div class="card-body">
+                            <h5 class="card-title">PC Technician</h5>
+                            <p class="card-text">Our technicians are proffessionals with over 10+ years experience in
+                                the
+                                field of making lives easier</p>
+                            <a href="{% url 'pc_technician' %}" class="btn lg bg-dark text-white">Book Now</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 

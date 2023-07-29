@@ -67,7 +67,6 @@ section h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 110vh;
 }
 
 .third-section {
@@ -239,11 +238,14 @@ h2 {
     }
 
     .second-section {
-        height: 160vh;
+        height: 150vh;
+        font-size: 10rem;
+        margin-top: 10rem;
     }
 
     .third-section {
         height: 120vh;
+        margin-top: 50px;
     }
 
     footer>children {
@@ -257,7 +259,7 @@ h2 {
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .first-section p {
