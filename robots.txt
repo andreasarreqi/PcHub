@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /accounts/
+Sitemap: http://pchub-ac046d943cba.herokuapp.com/sitemap.xml
