@@ -67,6 +67,7 @@ section h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 120vh;
 }
 
 .third-section {
@@ -245,7 +246,7 @@ h2 {
 
     .third-section {
         height: 120vh;
-        margin-top: 50px;
+        margin-top: 80px;
     }
 
     footer>children {
