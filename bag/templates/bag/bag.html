@@ -41,9 +41,6 @@
                     <div class="col-12 col-sm-6 mb-2">
                         {% include "bag/product-image.html" %}
                     </div>
-                    <div class="col-12 col-sm-6 mb-2">
-                        <!--include "bag/product-info.html" -->
-                    </div>
                     <div class="col-12 col-sm-6 order-sm-last">
                         <p class="my-0">Price Each: {{ item.computer.price }} </p>
 
@@ -70,7 +67,7 @@
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
                         <tr>
-                            <th scope="col">Product Info</th>
+                            <th scope="col">Subtotal</th>
                             <th scope="col"></th>
                             <th scope="col">Price</th>
                             <th scope="col">Qty</th>
@@ -84,10 +81,9 @@
                             <img src="{{ item.product.image.url }}" alt="img-fluid rounded">
                         </td>
                         <td class="py-3">
-                            <p class="my-0"><strong>{{ computer.name }}</strong></p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">€ {{ item.product.price }}</p>
+                            <p class="my-0"> €{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
