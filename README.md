@@ -11,6 +11,22 @@ I wanted to create an full-stack e-commerce web application selling gaming compu
 ### Business Type
 The approach I took to this topic is a B2C type of business which means its Business To Customer.
 
+
+
+How to test a payment:
+<BR>
+CARD NUMBER:
+Visa (debit)	4000056655665556
+<BR>
+CVC: 
+ANY 3 DIGITS
+<BR>
+DATE:
+ANY FUTURE DATE
+<BR>
+
+
+
 ## AGILE Methodology
 
 ### User Stories
@@ -359,6 +375,19 @@ EPIC 5 - Payments
 
 This epic is for the payment related stories
 
+How to test a payment:
+<BR>
+CARD NUMBER:
+Visa (debit)	4000056655665556
+<BR>
+CVC: 
+ANY 3 DIGITS
+<BR>
+DATE:
+ANY FUTURE DATE
+<BR>
+
+
 PAYMENTS - USER STORIES
 
 1. As a user, I would like to be able to checkout/purchase the products i chose
@@ -408,9 +437,9 @@ DEPLOYMENT - USER STORIES
 1. As a user, I want to see a live website application.
 
 <details>
-<summary>1. Acceptance Criteria </summary>
+            <summary>1. Acceptance Criteria </summary>
 
-- Deploy to Heroku
+                Deploy to Heroku
 
 </details>
 <br>
