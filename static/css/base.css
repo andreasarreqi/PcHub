@@ -158,6 +158,10 @@ section h3 {
     padding: 20px;
 }
 
+/*---------------------------------- Subscribe button */
+.klaviyo_form_trigger {
+    font-size: 15px;
+}
 /*---------------------------------- Register/Login/Logout Form styling */
 .signup {
     margin: 6%;
