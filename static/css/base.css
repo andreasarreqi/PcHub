@@ -140,6 +140,10 @@ section h3 {
     color: blue;
 }
 
+.fixed-top a {
+    color: white;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
