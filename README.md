@@ -770,6 +770,17 @@ Packages were frozen using "pip3 freeze --local > requirements.txt" so heroku kn
 
 ## Functionality
 
+NAVBAR
+HOME PAGE
+FOOTER
+COMPUTERS( quantity, add to bag button + toast)
+PROFILE (IF ADMIN ADD/DELETE PRODUCT)
+BAG ( edit,remove, quantity, toast) (empty bag button)
+LOGIN( TOAST)
+REGISTER(TOAST)
+CHECKOUT(Toast+ success)
+
+
 - As a developer, I need to set up the general functionality of the website
 
 
@@ -905,7 +916,7 @@ Number| Feature       |    Action     | Expected Result  | Actual Result |
             <summary>Evidence </summary
 
 </details>
-
+</details>
 
 ## Browser Compatibility
 
