@@ -48,7 +48,6 @@ EPIC 1 - Site Functionality
 The base setup epic is for all stories needed for the base set up of the application. Without the base setup, the app would not be possible so it was the first epic to be delivered as all other features depend on the completion of the base setup.
 
 
-
 1. As a developer, I need to set up the general functionality of the website
 
 
@@ -771,146 +770,142 @@ Packages were frozen using "pip3 freeze --local > requirements.txt" so heroku kn
 
 ## Functionality
 
-<table>
-  <tr>
-   <td>
-<strong>Test Label</strong>
-</li>
-</ol>
-   </td>
-   <td><strong>Test Action</strong>
-   </td>
-   <td colspan="2" ><strong>Expected Outcome</strong>
-   </td>
-   <td><strong>Test Outcome </strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Site loading
-   </td>
-   <td>Navigate the Home Page
-   </td>
-   <td colspan="2" >Nav bar with home/arrival/bag/login/register buttons and posts user can interact with
-   </td>
-   <td>PASS
-   </td>
-  </tr>
-  <tr>
-   <td>Access Individual products
-   </td>
-   <td>User is met with the name of the product,  description, price, keep shopping/bag buttons.
-   </td>
-   <td colspan="2" >Buttons redirect to the designated location
-   </td>
-   <td>PASS
-   </td>
-  </tr>
-  <tr>
-   <td>Login/Register buttons
-   </td>
-   <td>Clicking each button respectively and trying to interact with them.
-   </td>
-   <td colspan="2" > The user can register/login/logout of the web page
-   </td>
-   <td>PASS
-   </td>
-  </tr>
-  <tr>
-   <td>Arrival
-   </td>
-   <td>Clicking the Arrival
-   </td>
-   <td colspan="2" >The user is met with the page of Arrivals consisting of new products that are soon to be sold on the web page
-   </td>
-   <td>PASS
-   </td>
-  </tr>
-  <tr>
-   <td>Computer Detail
-   </td>
-   <td>Click the individual computer
-   </td>
-   <td colspan="2" > The user is redirected to the individual product where they can choose the quantity
-   </td>
-   <td>PASS
-   </td>
-  </tr>
-  <tr>
-   <td>Add to bag
-   </td>
-   <td>AClick add to bag button
-   </td>
-   <td colspan="2" > The user is notified via toasts that the product has been added to the bag along with the quantity, the price, and a checkout button
-   </td>
-   <td>PASS
-   </td>
-  </tr>
-  <td>Contact Form
-   </td>
-   <td>Fill the form and click submit
-   </td>
-   <td colspan="2" > The form sends data to the admin panel
-   </td>
-   <td>PASS
-   </td>
-   <tr>
-   <td>PC Technician Form
-   </td>
-   <td>Fill the form and click submit
-   </td>
-   <td colspan="2" > The form sends data to the admin panel
-   </td>
-   <td>PASS
-   </td>
-   </tr>
-   <tr>
-   <td>Bag input fields
-   </td>
-   <td>Choose the quantity of the product
-   </td>
-   <td colspan="2" > The input increments/decrements depending on the user input
-   </td>
-   <td>PASS
-   </td>
-   </tr>
-   <tr>
-   <td>Bag Update/Delete buttons 
-   </td>
-   <td>Click on update or delete button
-   </td>
-   <td colspan="2" > The buttons react accordingly to their purpose. Update notifies the user that the bag has been updated telling them that the quantity has changed(if it has changed). Delete notifies the user that they successfully deleted an item from the bag
-   </td>
-   <td>PASS
-   </td>
-   </tr>
-   <td colspan="2" > The input increments/decrements depending on the user input
-   </td>
-   <td>PASS
-   </td>
-   </tr>
-   <tr>
-   <td>Checkout
-   </td>
-   <td>Fill the form and click secure checkout
-   </td>
-   <td colspan="2" > The order will be submited and the user is greeted with a thank you and their checkout details
-   </td>
-   <td>PASS
-   </td>
-   </tr>
-   <tr>
-   <td>Emails
-   </td>
-   <td>Regiest/subscribe
-   </td>
-   <td colspan="2" > An email is sent to the user automatically using MailChimp
-   </td>
-   <td>PASS
-   </td>
-   </tr>
-  </tr>
-</table>
-<ol>
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
+2. 
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
+3.
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
+4.
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
+5.
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
+6.
+
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
+7.
+
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
+8.
+
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
+
+9.
+
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
+
+10.
+
+- As a developer, I need to set up the general functionality of the website
+
+
+Number| Feature       |    Action     | Expected Result  | Actual Result |
+------| ------------- | ------------- | ------------- | ------------- |
+   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+<details>
+            <summary>Evidence </summary
+
+</details>
+
 
 ## Browser Compatibility
 
