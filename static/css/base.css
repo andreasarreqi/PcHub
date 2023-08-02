@@ -20,6 +20,12 @@ main {
     margin-top: 50px;
 }
 
+/* Navbar icon */
+
+.fixed-top i {
+    color: white
+}
+
 /*--------------------------------------------- Footer styling*/
 footer {
     background-color: black;
@@ -138,10 +144,6 @@ section h3 {
 .container-fluid a:hover {
     font-size: larger;
     color: blue;
-}
-
-.fixed-top a {
-    color: white;
 }
 
 .overlay {
