@@ -5,6 +5,7 @@ from django.template.loader import render_to_string
 
 from .models import Order, OrderLineItem
 from products.models import Computers
+from profiles.models import UserProfile
 
 import stripe
 import json
@@ -69,7 +70,7 @@ class StripeWH_Handler:
         profiles = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
-            profiles = AccountProfile.objects.get(user__username=username)
+            profiles = UserProfile.objects.get(user__username=username)
             if save_info:
                 profiles.default_phone_number = shipping_details.phone
                 profiles.default_country = shipping_details.address.country
