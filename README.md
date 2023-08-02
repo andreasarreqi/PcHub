@@ -9,8 +9,13 @@ THIS WEBISTE IS FOR EDICUATIONAL PURPOSES ONLY.
 I wanted to create an full-stack e-commerce web application selling gaming computers which I am very passionate about.
 
 ### Business Type
+
 The approach I took to this topic is a B2C type of business which means its Business To Customer.
 
+- Business goals addressed with this site
+- Build brand awareness;
+- Prensent the business value proposition with high-quality content;
+- Catch customer's attention and offer a good experience on buying a new Gaming Pc.
 
 
 How to test a payment:
@@ -471,7 +476,8 @@ As a developer, I want to create a README file to document every step I took cre
 - The icon on the Browser tab next to the website name.
 - There to help the user navigate easier through the browser tab.
 
-![Alt text](static/media/favicon.ico)
+ ![Alt text](docs/images/favicon.PNG)
+ 
 
 </details>
 
@@ -481,73 +487,39 @@ As a developer, I want to create a README file to document every step I took cre
 - Main page contains the nav bar
 - Page sections
 - Footer
-
-![Alt text](static/images/front%20page.PNG)
-
-
-![Alt text](<docs/images/admin add product.PNG>) 
+- Newsletter subscription form
 
 
-![Alt text](<docs/images/admin crud edit or delete product.PNG>)
+- The first section of the page containing a Header and a link to the shopping page.
 
 
-![Alt text](<docs/images/admin crud product.PNG>)
 
 
-![Alt text](<docs/images/arrivals products.PNG>)
-
-![Alt text](docs/images/arrivals.PNG) 
-
-
-![Alt text](<docs/images/bag success.PNG>)
-
-
- ![Alt text](docs/images/bag.PNG) 
- 
- 
- ![Alt text](<docs/images/checkout success.PNG>)
- 
- 
-  ![Alt text](docs/images/checkout.PNG)
- 
- 
-  ![Alt text](<docs/images/desktop pc.PNG>)
- 
- 
-  ![Alt text](docs/images/favicon.PNG)
- 
- 
   ![Alt text](<docs/images/first section.PNG>)
  
  
-  ![Alt text](docs/images/footer.PNG)
- 
- 
-  ![Alt text](docs/images/navbar.PNG)
- 
- 
-  ![Alt text](<docs/images/pc detail.PNG>)
-  
-  
-   ![Alt text](<docs/images/profile page.PNG>)
-  
-  
+
+ - The second section of the page containing a PC SHOP card and a PC TECHNICIAN card with the link to pc 
+   technician form
+
+
    ![Alt text](<docs/images/second section.PNG>)
   
   
-   ![Alt text](<docs/images/sign in.PNG>)
   
-  
-   ![Alt text](<docs/images/signout page.PNG>)
-  
-  
-   ![Alt text](docs/images/signup.PNG)
-  
-  
-   ![Alt text](docs/images/subscribe.PNG) 
-  
-  
+
+  - The third section of the page containing 3 cards explaining why the costumer should choose us.
+
+
+
   ![Alt text](<docs/images/third section.PNG>)
+
+
+
+- The newsletter form allows the users to subscribe to the latest deals.
+
+
+![Alt text](docs/images/subscribe.PNG) 
 
 
 
@@ -558,26 +530,36 @@ As a developer, I want to create a README file to document every step I took cre
 
 The nav bar (Home , Arrivals , Login , Register , Bag)
 
-![Alt text](static/images/new%20nav.PNG)
+![Alt text](docs/images/navbar.PNG)
 
 </details>
 
 <details>
 <summary>Footer</summary>
 
-- Footer contains the Social Media links that redirect to each respective link
+- Footer contains the Social Media link that redirect to each respective link
+- Footer contains Opening Hours
+- Footer contains Contact link and Privacy policy link
+- Footer contains the creator of the website
 
-![Alt text](static/images/footer.PNG)
+
+![Alt text](docs/images/footer.PNG)
+
 
 </details>
 
+
 <details>
+
 
 <summary>Login Form</summary>
 
 - Login form allows users to log into the website
 
-![Alt text](static/images/login.PNG)
+
+   ![Alt text](<docs/images/sign in.PNG>)
+  
+  
 
 </details>
 
@@ -586,16 +568,26 @@ The nav bar (Home , Arrivals , Login , Register , Bag)
 
 - Logout form allows user to log out of t he website
 
-![Alt text](static/images/logout.PNG)
+
+![Alt text](<docs/images/signout page.PNG>)
+  
+
 
 </details>
 
+
+
 <details>
+
+
 <summary>Register Form</summary>
+
 
 - Register form allows user to create their own account
 
-![Alt text](static/images/register.PNG)
+  
+   ![Alt text](docs/images/signup.PNG)
+
 
 </details>
 
@@ -604,39 +596,37 @@ The nav bar (Home , Arrivals , Login , Register , Bag)
 
 - Contact form allows user to contatt the website's administrators.
 
-![Alt text](static/images/contact%20form.PNG)
 
-</details>
+![Alt text](<docs/images/contact us form.PNG>)
 
-<summary>PC Technician form</summary>
-
-- Contact form allows user to contatt the website's administrators.
-
-![Alt text](static/images/contact%20form.PNG)
 
 </details>
 
 <details>
-<summary>Add a post </summary>
+<summary> PC Technician form</summary>
 
-- Allows the admin to add a post from the front end
+    - Contact form allows user to contatt the website's administrators.
 
-![Alt text](static/images/add%20post.PNG)
+![Alt text](<docs/images/pc technician form.PNG>)
+
 
 </details>
 
 <details>
-
-
-<details>
-
 <summary> Update/Delete Form</summary>
 
-- Allows admin to update or delete the forms from front end
+- Allows admin to update a product from the front-end
 
-![Alt text](static/images/delete%20post.PNG)
+![Alt text](<docs/images/admin crud product.PNG>)
 
-![Alt text](static/images/update%20post.PNG)
+
+- Allows admin to update/delete a product from the front-end
+![Alt text](<docs/images/admin crud edit or delete product.PNG>)
+
+
+- Allows admin to add a product from the front-end.
+![Alt text](<docs/images/admin add product.PNG>)
+
 
 </details>
 
@@ -644,67 +634,72 @@ The nav bar (Home , Arrivals , Login , Register , Bag)
 
 <summary> Arrivals Page </summary>
 
-- Allows users to Like or Comment a post
+- The page contains products that will soon be available in the store giving the users a short descritpion on   
+  what  the product looks like, what it contains and how much it costs.
 
-![Alt text](static/images/add%20comment.PNG)
 
-![Alt text](static/images/likes.PNG)
+
+![Alt text](docs/images/arrivals.PNG)
+
+
+![Alt text](<docs/images/arrivals products.PNG>)
+
 
 </details>
+
 
 <details>
-
-<summary> Responsiveness</summary>
-
-- Responsiveness was achieved using Bootstrap classes and CSS
-
-![Alt text](static/images/responsive%20comment%20section%20%2B%20form.PNG)
-
-![Alt text](static/images/responsive%20main%20page.PNG)
-
-![Alt text](static/images/responsive%20post.PNG)
-
-</details>
-
-<details>
-
-<summary> Error Pages </summary>
-404.html error page
-
-500.html error page
-
-![Alt text](static/images/500%20error.PNG)
-
-![Alt text](static/images/404%20error.PNG)
-
-</details>
-
 <summary> Computers page </summary>
 
+- The computers page contains all the products in our store with a descrption about the product.
 
-![Alt text](static/images/500%20error.PNG)
 
-![Alt text](static/images/404%20error.PNG)
+![Alt text](<docs/images/desktop pc.PNG>)
+
+
 
 </details>
 
-
+<details>
 <summary> Computer detail page </summary>
 
+- The computers Detail page contains the individual product with their respective image and their own properties 
+  and description    
+- The computer detail page contains a keep shopping button which redirects user to computers page.
+- The computer detail page contains add to bag button which allows user to add a product to the bag
 
-![Alt text](static/images/500%20error.PNG)
 
-![Alt text](static/images/404%20error.PNG)
+![Alt text](<docs/images/contact us form.PNG>)
+
+
 
 </details>
 
-
+<details>
 <summary> Bag </summary>
 
+- The bag contains the product image
 
-![Alt text](static/images/500%20error.PNG)
+- The bag contains the product price
 
-![Alt text](static/images/404%20error.PNG)
+- The bag contains the product quantity
+
+- The bag contains the product update/remove buttons that allows the user to update quantity and remove the item 
+   from bag
+
+- The bag contains the sub total
+
+- The bag contains the delivery cost
+
+- The bag contains the product grand total
+
+- The bag contains the product keep shoping button and the checkout button
+
+![Alt text](docs/images/bag.PNG)
+
+
+
+![Alt text](<docs/images/bag success.PNG>)
 
 </details>
 
