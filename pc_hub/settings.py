@@ -31,7 +31,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'pchub-ac046d943cba.herokuapp.com',
-    '8000-andreasarreqi-pchub-h3xyyhvo8ir.ws-eu102.gitpod.io'
+    '8000-andreasarreqi-pchub-z95vv9q8whf.ws-eu102.gitpod.io'
     ]
 
 
