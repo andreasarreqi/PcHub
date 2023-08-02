@@ -703,25 +703,41 @@ The nav bar (Home , Arrivals , Login , Register , Bag)
 
 </details>
 
+<details>
 <summary> Toasts </summary>
-404.html error page
 
-500.html error page
+- Toast/Messages notify the users of their action. 
 
-![Alt text](static/images/500%20error.PNG)
 
-![Alt text](static/images/404%20error.PNG)
+Toasts appear when:
+- User creates an account
+- User Logs in the account
+- User Logs out of the account
+- User Adds a product to bag (containing product image, quantity, price)
+- User updates/Removes item from bag
+- User Checkout (Contains the order number)
+- User submits the contact form
+- User submits the pc technician form
+
+- Alert message when admin edits a product
 
 </details>
 
+
+
+<details>
 <summary> Checkout </summary>
-404.html error page
 
-500.html error page
+- Checkout section contains the checkout form, product image, product price.
 
-![Alt text](static/images/500%20error.PNG)
 
-![Alt text](static/images/404%20error.PNG)
+![Alt text](docs/images/checkout.PNG)
+
+
+
+![Alt text](<docs/images/checkout success.PNG>)
+
+
 
 </details>
 
@@ -994,6 +1010,9 @@ The website works on different browsers: <strong>Chrome, Firefox and Edge.</stro
 
 </details>
 
+
+
+
 ## Validator Testing
 
 <details>
@@ -1032,33 +1051,14 @@ All the pages that get displayed are validated.
 
 
 
-
-![Alt text](static/images/add%20post%20html%20validator.PNG)
-
-![Alt text](static/images/delete%20post%20html%20validator.PNG)
-
-![Alt text](static/images/index%20html%20validator.PNG)
-
-![Alt text](static/images/login%20form%20html%20validator.PNG)
-
-![Alt text](static/images/register%20html%20validator.PNG)
-
-![Alt text](static/images/shared%20posts%20html%20validator.PNG)
-
-![Alt text](static/images/update%20post%20html%20validator%20testing.PNG)
-
-![Alt text](static/images/contact%20form%20HTML%20validator.PNG)
-
-![Alt text](static/images/500%20%20error%20HTML%20validator.PNG)
-
-![Alt text](static/images/error%20HTML%20validator.PNG)
-
 </details>
 
 <details>
 <summary>CSS</summary>
 CSS validator.
 All CSS code is validated.
+
+
 ![Alt text](<docs/testing/CSS/base.css CSS validator.PNG>)
 
 
@@ -1068,14 +1068,22 @@ All CSS code is validated.
 ![Alt text](<docs/testing/CSS/profile.css CSS validator.PNG>)
 
 
-![Alt text](static/images/css%20validator.PNG)
+
 
 </details>
 
 <details>
 <summary>Python Validator</summary>
 PEP8 validator.
-All Python code is validated.
+
+All Python code is validated on all the apps
+
+- Models
+- Admin
+- Views
+- Forms
+- webooks
+- webhook_handler
 
 
 ![Alt text](<docs/testing/PYTHON/arrivals models python validator.PNG>)
@@ -1131,52 +1139,41 @@ All Python code is validated.
 
  ![Alt text](<docs/testing/PYTHON/profiles views python validator.PNG>)
 
- ![Alt text](<docs/testing/lighthouse validator.PNG>)
-- Models
 
-![Alt text](static/images/models%20pep8.PNG)
-
-- Views
-
-![Alt text](static/images/views%20pep8%20validator.PNG)
-
-- Forms
-
-![Alt Text](static/images/forms%20validator%20pep8.PNG)
-
-- Contact
-
-![Alt text](static/images/contact%20view%20PEP8.PNG)
-
-![Alt text](static/images/contact%20PEP8%20validator.PNG)
-
-![Alt text](static/images/contact%20admin%20PEP8.PNG)
-
-![Alt text](static/images/contact%20form%20PEP8.PNG)
 
 </details>
 <details>
 <summary>Lighthouse</summary>
 Lighthouse.
 
-![Alt text](static/images/lighthouse.PNG)
+
+![Alt text](<docs/testing/arrivals lighthouse validator.PNG>)
 
 
-![Alt text](<docs/testing/lighthouse validator.PNG>)
+![Alt text](<docs/testing/computer detail lighthouse validator.PNG>)
+
+
+![Alt text](<docs/testing/computers lighthouse validator.PNG>)
+
+
+![Alt text](<docs/testing/front page lighthouse validator.PNG>)
+
+
+
+
 </details>
 
 <details>
 <summary>WAVE</summary>
 WAVE validator.
 
-![Alt text](static/images/wave%20validator.PNG)
+
+![Alt text](<docs/testing/wave validator.PNG>)
+
 
 </details>
 
-### Unfixed Bugs / Other
 
-- A few errors accur in the HTML validator but the web application works fine. The errors maybe appear due to use of Django elemetts in the HTML templates.
-- Posts cannot have the same name. Only one post can have a specific name(title/artist name)
 
 ## Deployment
 
@@ -1193,31 +1190,31 @@ WAVE validator.
 ## Credits
 
 - [Code Institute](https://codeinstitute.net)
-- For the great lessons (I think therefore blog)
+- For the great lessons (Boutique ado)
+
 
 - [Favicon](https://favicon.io)
 - For the browser tab icon
 
+
 - [StudyGyaan](https://studygyaan.com/django/how-to-create-a-unique-slug-in-django?utm_content=cmp-true)
 - For the tutorial on Slugify
+
 
 - [Font Awesome.](https://fontawesome.com/)
 - For the Social MEdia icons , Like, Comment buttons
 
+
 - [Bootstrap](https://bootstrap.com)
 - Bootstrap was user to create a responsive desing on all platforms.
 
+
 - [Pexels](https://pexels.com)
-- Images were taken from Pexels.
+- Facebook profile picture was taken from Pexels.
 
-- [<OrdinaryCoders>](https://ordinarycoders.com/blog/article/django-messages-framework)
-- Django alert messages when post is added/edited/deleted and when contact form is submited
 
-- [CoduBeta](https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to_)
-- UserPassestestmixin was taken from here.
+- Product images were taken from Amazon, Cyberpower.
 
-- [Biograpy](https://www.biography.com/musicians/tupac-shaku)
-- Biography of the Artists taken from Biography.
 
 ## Acknowledgements
 
