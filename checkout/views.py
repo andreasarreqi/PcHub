@@ -12,6 +12,8 @@ from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 
+from checkout.webhook_handler import StripeWH_Handler
+
 import stripe
 import json
 
