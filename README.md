@@ -850,153 +850,340 @@ Packages were frozen using "pip3 freeze --local > requirements.txt" so heroku kn
 
 ## Functionality
 
-NAVBAR
-HOME PAGE
-FOOTER
-COMPUTERS( quantity, add to bag button + toast)
-PROFILE (IF ADMIN ADD/DELETE PRODUCT)
-BAG ( edit,remove, quantity, toast) (empty bag button)
-LOGIN( TOAST)
-REGISTER(TOAST)
-CHECKOUT(Toast+ success)
+FIELDS TESTED:
+
+        NAVBAR
+        HOME PAGE
+        FOOTER
+        COMPUTERS( quantity, add to bag button + toast)
+        PROFILE (IF ADMIN ADD/DELETE PRODUCT)
+        BAG ( edit,remove, quantity, toast) (empty bag button)
+        LOGIN( + TOAST)
+        REGISTER(TOAST)
+        CHECKOUT(Toast+ success)
+
+<table>
+  <tr>
+   <td>
+<strong>Test Label</strong>
+</li>
+</ol>
+   </td>
+   <td><strong>Test Action</strong>
+   </td>
+   <td colspan="2" ><strong>Expected Outcome</strong>
+   </td>
+   <td><strong>Test Outcome </strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Site loading
+   </td>
+   <td>Navigate the Home Page
+   </td>
+   <td colspan="2" >Nav bar with login/register/bag , page seperated in 3 sections informing the user and contains buttons that the  user can interact with.
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Register
+   </td>
+   <td>Click on the account logo
+   </td>
+   <td colspan="2" >User Can choose to either Register or Log in
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Register
+   </td>
+   <td>User clicks the register button
+   </td>
+   <td colspan="2" >User is redirected to the signup form
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td> Signup form
+   </td>
+   <td>User fills up the form
+   </td>
+   <td colspan="2" >User is notified  to check ther email to confirm the account registrations
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Verification
+   </td>
+   <td>User submist signup form
+   </td>
+   <td colspan="2" >Email is sent to the user's email
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Login button
+   </td>
+   <td>User clicks the login button
+   </td>
+   <td colspan="2" >User is redirected to the login page
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Login form
+   </td>
+   <td>User fills the login form and clicks login
+   </td>
+   <td colspan="2" >User is redirected to the front page, and a message/toast appears saying they've logged in as USERNAME
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Logout Button
+   </td>
+   <td>User clicks the logout button
+   </td>
+   <td colspan="2" >User is redirected to the logout page
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Logout
+   </td>
+   <td>User clicks the logout button on the logout page
+   </td>
+   <td colspan="2" >User is redirected to the main page with a message/toast notifying the user that they have logged out of USERNAME
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Bag button
+   </td>
+   <td>User clicks the bag  button in the navbar
+   </td>
+   <td colspan="2" >User is redirected to the bag page
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Add to Bag
+   </td>
+   <td>User clicks the add to bag button on the product
+   </td>
+   <td colspan="2" >User is notified that they have added ITEM NAME + QUANTITY+ PRICE to the bag
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td> Bag quantity input
+   </td>
+   <td>User  changes the quantity number
+   </td>
+   <td colspan="2" >User is notified that the prdocut quantity has been changed to QUANTITY
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+  <tr>
+   <td>Second sections PC SHOP card
+   </td>
+   <td>User clicks the SHOP now button 
+   </td>
+   <td colspan="2" >User is redirected to the computers page
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Second sections PC TECHNICIAN card
+   </td>
+   <td>User clicks the book now button
+   </td>
+   <td colspan="2" >User is redirected to the pc technician page
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td> PC Technician form
+   </td>
+   <td>User fills the form and click submit
+   </td>
+   <td colspan="2" >User is redirected to the front page and notified with a message that the form has been sent
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Footer section 
+   </td>
+   <td>User clicks contact button
+   </td>
+   <td colspan="2" >User is redirected to the contact page
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Contact form
+   </td>
+   <td>User fills the form and clicks the submit button
+   </td>
+   <td colspan="2" >User is redirected to the pc technician page and notified with a message that the form has been sent
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Privacy policy
+   </td>
+   <td>User  clicks the Privacy policy button
+   </td>
+   <td colspan="2" >User is redirected to the Privacy policy page
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td> Social Media link
+   </td>
+   <td>User  clicks the Facebook logo(link)
+   </td>
+   <td colspan="2" >User is redirected to the facebook page in another tab
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Go to the shoping section
+   </td>
+   <td>User clicks the SHOP now button in the front page
+   </td>
+   <td colspan="2" >User is redirected to the computers page
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Individual products
+   </td>
+   <td>Click an individual product
+   </td>
+   <td colspan="2" > The user can see the product image with quantity field and price, a keep shoping button and a add to bag button
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>My Posts Button
+   </td>
+   <td>Clicking the My posts button
+   </td>
+   <td colspan="2" >The user gets redirected to a page that they can see the posts they've created, if they haven't done so yet a button is shwwn to help them do so.
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Admin Add Post button
+   </td>
+   <td>Click the add post button
+   </td>
+   <td colspan="2" >A form is displayed to a admin allowing the admin to create a product through the front end
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td> Edit product
+   </td>
+   <td>Admin clicks the edit button
+   </td>
+   <td colspan="2" >Admin is redirected to the edit product form
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td> Edit product form
+   </td>
+   <td>Admin clicks the submit button after editing the product
+   </td>
+   <td colspan="2" >The product now has beed updated and the admin is notified that the ITEM has been updated
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td>Delete a product
+   </td>
+   <td>AClick the buttons on the cards  DELETE
+   </td>
+   <td colspan="2" > The products is deleted
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <tr>
+   <td> Checkout
+   </td>
+   <td>User clicks the Secure checkout button
+   </td>
+   <td colspan="2" >User is redirected to the checkout form. The page contains the form, product, quantity,price
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <td> Checkout Form
+   </td>
+   <td>User fills the form clicks checkout button
+   </td>
+   <td colspan="2" >User is redirected to the checkout success page and the user is notified that an email will be sent to the user containing the order details. The page contains the order details and the go to shoping page button.
+   </td>
+   <td>PASS
+   </td>
+   <td>Order Verification Email
+   </td>
+   <td>User submits the order
+   </td>
+   <td colspan="2" >An email is sent to the user containing all the order information like the full name, address, postal code, country ,email, order number, order price, delivery cost.
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  </tr>
+  <td> Checkout success button
+   </td>
+   <td>User clicks the button
+   </td>
+   <td colspan="2" >User is redirected to products page.
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+</table>
+<ol>
 
 
-- As a developer, I need to set up the general functionality of the website
 
-
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
 
 </details>
 
-2. 
-- As a developer, I need to set up the general functionality of the website
 
 
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
-
-</details>
-
-3.
-- As a developer, I need to set up the general functionality of the website
-
-
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
-
-</details>
-
-4.
-- As a developer, I need to set up the general functionality of the website
-
-
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
-
-</details>
-
-5.
-- As a developer, I need to set up the general functionality of the website
-
-
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
-
-</details>
-
-6.
-
-- As a developer, I need to set up the general functionality of the website
-
-
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
-
-</details>
-
-7.
-
-- As a developer, I need to set up the general functionality of the website
-
-
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
-
-</details>
-
-8.
-
-- As a developer, I need to set up the general functionality of the website
-
-
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
-
-</details>
-
-
-9.
-
-- As a developer, I need to set up the general functionality of the website
-
-
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
-
-</details>
-
-
-10.
-
-- As a developer, I need to set up the general functionality of the website
-
-
-Number| Feature       |    Action     | Expected Result  | Actual Result |
-------| ------------- | ------------- | ------------- | ------------- |
-   1   | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
-
-<details>
-            <summary>Evidence </summary
-
-</details>
-</details>
 
 ## Browser Compatibility
 
