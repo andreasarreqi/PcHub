@@ -11,6 +11,11 @@
     <meta name="keywords"
         content="PC HUB, PC, Gaming PC, computers, gaming computers, brand new, brand new computers, powerful gaming pc, arrivals, arrivals news, in store soon, cybertron gaming pc, powerful memory, powerful ram, powerful proccessor, amazing gaming pc, custom made gaming pc.">
     <meta name="author" content="Andrea Sarreqi">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' &}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' &}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' &}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' % }">
     {% endblock %}
 
     {% block corecss %}
@@ -43,7 +48,7 @@
     <script src="https://kit.fontawesome.com/49ba80934f.js" crossorigin="anonymous"></script>
     <!-- Stripe-->
     <script src="https://js.stripe.com/v3/"></script>
-    <!--MailChimp-->
+    <!--Klaviyo Subscription -->
     <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RCKdDv">
     </script>
     {% endblock %}
@@ -88,7 +93,8 @@
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                <a href="{% url 'add_computer' %}" class="text-black  dropdown-item">Product Management</a>
+                                <a href="{% url 'add_computer' %}" class="text-black  dropdown-item">Product
+                                    Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="text-black  dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="text-black  dropdown-item">Logout</a>

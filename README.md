@@ -1,7 +1,7 @@
 # [Welcome to PC HUB](http://pchub-ac046d943cba.herokuapp.com/)
 
 
-(![Alt text](mockup.PNG))
+(![Alt text](mockup.PNG)
 
 
 
@@ -1759,10 +1759,6 @@ Finally, input your Github account credentials to complete the process.
 - For the browser tab icon
 
 
-- [StudyGyaan](https://studygyaan.com/django/how-to-create-a-unique-slug-in-django?utm_content=cmp-true)
-- For the tutorial on Slugify
-
-
 - [Font Awesome.](https://fontawesome.com/)
 - For the Social MEdia icons , Like, Comment buttons
 
@@ -1774,10 +1770,22 @@ Finally, input your Github account credentials to complete the process.
 - [Pexels](https://pexels.com)
 - Facebook profile picture was taken from Pexels.
 
-
 - Product images were taken from Amazon, Cyberpower.
+
+- Product details were taken from Amazon, Cyberpower.
+
+-[DBeaver](https://dbeaver.io/)
+- Database diagram was made using Dbeaver
+
+- [Favicon](https://favicon.io/)
+- Tab browser icon was made using Favicon
+
 
 
 ## Acknowledgements
+
+- I would like to that the Code institute for helping me get this far.
+
+- I would like to thank Code Institute Tutor team for being so patient and always there to help with every problem
 
 - I would like to thank my mentor Daisy for guiding me.
