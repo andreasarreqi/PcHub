@@ -1,6 +1,9 @@
 # [Welcome to PC HUB](http://pchub-ac046d943cba.herokuapp.com/)
 
-![Alt text]()
+
+(![Alt text](mockup.PNG))
+
+
 
 ## Introduction
 
@@ -8,11 +11,7 @@ Welcome to my very own [PC HUB](http://pchub-ac046d943cba.herokuapp.com/).
 THIS WEBISTE IS FOR EDICUATIONAL PURPOSES ONLY.
 I wanted to create an full-stack e-commerce web application selling gaming computers which I am very passionate about.
 
-### Business Type
-
-
-![Alt text](<docs/testing/pc hub facebook page.PNG>)
-
+## Business Type
 
 The approach I took to this topic is a B2C type of business which means its Business To Customer.
 
@@ -20,7 +19,6 @@ The approach I took to this topic is a B2C type of business which means its Busi
 - Build brand awareness;
 - Prensent the business value proposition with high-quality content;
 - Catch customer's attention and offer a good experience on buying a new Gaming Pc.
-
 
 How to test a payment:
 <BR>
@@ -34,6 +32,24 @@ DATE:
 ANY FUTURE DATE
 <BR>
 
+## Market Strategy
+
+
+![Alt text](<docs/testing/pc hub facebook page.PNG>)
+
+- Facebook was used as our main marketin strategy taking advantage of Facebook's popularity to set a fine field for business growth and healthy competition. 
+
+
+
+
+## Database Design
+
+- The database diagram explains the properties of each model and describest their relationship between eachother 
+   (if they have any)
+
+- The database diagram was created using DBeaver
+
+![Alt text](<diagram db.PNG>)
 
 
 ## AGILE Methodology
@@ -1636,7 +1652,7 @@ S3 Bucket
 
 - AWS_SECRET_ACCESS_KEY = Secret access key
 
-- Final AWS Setup
+ Final AWS Setup
 
 
 - If Heroku Config Vars has DISABLE_COLLECTSTATIC still, this can be removed now so that AWS will handle the static files.
@@ -1649,7 +1665,8 @@ S3 Bucket
 
 - No further settings are required, so click Upload.
 
-- Heroku Deployment
+
+Heroku Deployment
 
 - This project utilizes the services available at Heroku. Heroku is a platform as a service (PaaS) that allows 
 users - to build, deploy, and control applications in a cloud environment.
