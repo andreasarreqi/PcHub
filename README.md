@@ -461,6 +461,8 @@ As a developer, I want to create a README file to document every step I took cre
 
 </details>
 <br>
+
+
 ### Features
 
 <details>
@@ -477,10 +479,77 @@ As a developer, I want to create a README file to document every step I took cre
 <summary>Main Page</summary>
 
 - Main page contains the nav bar
-- Blog Posts
+- Page sections
 - Footer
 
 ![Alt text](static/images/front%20page.PNG)
+
+
+![Alt text](<docs/images/admin add product.PNG>) 
+
+
+![Alt text](<docs/images/admin crud edit or delete product.PNG>)
+
+
+![Alt text](<docs/images/admin crud product.PNG>)
+
+
+![Alt text](<docs/images/arrivals products.PNG>)
+
+![Alt text](docs/images/arrivals.PNG) 
+
+
+![Alt text](<docs/images/bag success.PNG>)
+
+
+ ![Alt text](docs/images/bag.PNG) 
+ 
+ 
+ ![Alt text](<docs/images/checkout success.PNG>)
+ 
+ 
+  ![Alt text](docs/images/checkout.PNG)
+ 
+ 
+  ![Alt text](<docs/images/desktop pc.PNG>)
+ 
+ 
+  ![Alt text](docs/images/favicon.PNG)
+ 
+ 
+  ![Alt text](<docs/images/first section.PNG>)
+ 
+ 
+  ![Alt text](docs/images/footer.PNG)
+ 
+ 
+  ![Alt text](docs/images/navbar.PNG)
+ 
+ 
+  ![Alt text](<docs/images/pc detail.PNG>)
+  
+  
+   ![Alt text](<docs/images/profile page.PNG>)
+  
+  
+   ![Alt text](<docs/images/second section.PNG>)
+  
+  
+   ![Alt text](<docs/images/sign in.PNG>)
+  
+  
+   ![Alt text](<docs/images/signout page.PNG>)
+  
+  
+   ![Alt text](docs/images/signup.PNG)
+  
+  
+   ![Alt text](docs/images/subscribe.PNG) 
+  
+  
+  ![Alt text](<docs/images/third section.PNG>)
+
+
 
 </details>
 
@@ -937,6 +1006,38 @@ The website works on different browsers: <strong>Chrome, Firefox and Edge.</stro
 HTML validator.
 All the pages that get displayed are validated.
 
+
+
+![Alt text](<docs/testing/HTML/arrivals HTML validator.PNG>) 
+
+
+![Alt text](<docs/testing/HTML/bag HTML validator.PNG>) 
+
+
+![Alt text](<docs/testing/HTML/checkout HTML validator testing.PNG>)
+
+
+ ![Alt text](<docs/testing/HTML/checkout success HTML validator.PNG>)
+
+
+ ![Alt text](<docs/testing/HTML/computer detail HTML validator.PNG>)
+
+
+ ![Alt text](<docs/testing/HTML/computer page HTML validator.PNG>)
+
+
+ ![Alt text](<docs/testing/HTML/home page HTML validator.PNG>)
+ 
+ 
+ 
+  ![Alt text](<docs/testing/HTML/profiles page HTML validator.PNG>)
+
+
+ ![Alt text](<docs/testing/HTML/signout HTML validator.PNG>)
+
+
+
+
 ![Alt text](static/images/add%20post%20html%20validator.PNG)
 
 ![Alt text](static/images/delete%20post%20html%20validator.PNG)
@@ -963,6 +1064,14 @@ All the pages that get displayed are validated.
 <summary>CSS</summary>
 CSS validator.
 All CSS code is validated.
+![Alt text](<docs/testing/CSS/base.css CSS validator.PNG>)
+
+
+ ![Alt text](<docs/testing/CSS/checkout CSS validator.PNG>) 
+
+
+![Alt text](<docs/testing/CSS/profile.css CSS validator.PNG>)
+
 
 ![Alt text](static/images/css%20validator.PNG)
 
@@ -973,6 +1082,61 @@ All CSS code is validated.
 PEP8 validator.
 All Python code is validated.
 
+
+![Alt text](<docs/testing/PYTHON/arrivals models python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/arrivals views python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/arrivalsadmin  python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/bag contexts python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/bag views python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/bag_tools python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/checkout admin python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/checkout forms python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/checkout models python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/checkout signals python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/checkout views python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/checkout webhook_handler python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/checkout webooks python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/contacts adminpython validator.PNG>) 
+
+![Alt text](<docs/testing/PYTHON/contacts forms python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/contacts models python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/contacts views python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/custom storage python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/home views python validator.PNG>) 
+
+![Alt text](<docs/testing/PYTHON/products admin python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/products form python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/products models python validator.PNG>) 
+ 
+ 
+ ![Alt text](<docs/testing/PYTHON/products views python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/products widgets python validator.PNG>) 
+
+![Alt text](<docs/testing/PYTHON/profiles forms python validator.PNG>)
+
+ ![Alt text](<docs/testing/PYTHON/profiles views python validator.PNG>)
+
+ ![Alt text](<docs/testing/lighthouse validator.PNG>)
 - Models
 
 ![Alt text](static/images/models%20pep8.PNG)
@@ -1002,6 +1166,8 @@ Lighthouse.
 
 ![Alt text](static/images/lighthouse.PNG)
 
+
+![Alt text](<docs/testing/lighthouse validator.PNG>)
 </details>
 
 <details>
