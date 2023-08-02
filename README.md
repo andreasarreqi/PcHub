@@ -752,7 +752,7 @@ Toasts appear when:
 - Psycopg2 - ElephantSQL(Database)
 - AWS (For storing images)
 - Stripe (for payments)
-- MailChimp(for emails)
+- Klaviyo (for emails)
 - Git (Version Control)
 - Github (Respository)
 - GitPod(Cloud IDE)
@@ -1170,6 +1170,44 @@ FIELDS TESTED:
    <td>User clicks the button
    </td>
    <td colspan="2" >User is redirected to products page.
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <td>Order Verification Email
+   </td>
+   <td>User submits the order
+   </td>
+   <td colspan="2" >An email is sent to the user containing all the order information like the full name, address, postal code, country ,email, order number, order price, delivery cost.
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  </tr>
+  <td> Newletter
+   </td>
+   <td>User clicks the subscribe button located on the bottom left corner
+   </td>
+   <td colspan="2" >User is introduces to a popup form containing the email field an a subscribe button.
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  <td>Order Verification Email
+   </td>
+   <td>User submits the order
+   </td>
+   <td colspan="2" >An email is sent to the user containing all the order information like the full name, address, postal code, country ,email, order number, order price, delivery cost.
+   </td>
+   <td>PASS
+   </td>
+  </tr>
+  </tr>
+  <td> Newsletter form
+   </td>
+   <td>User fills the form and clicks the subscribe button
+   </td>
+   <td colspan="2" >Email is sent to verify subscription
    </td>
    <td>PASS
    </td>
