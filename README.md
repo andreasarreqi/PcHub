@@ -10,6 +10,10 @@ I wanted to create an full-stack e-commerce web application selling gaming compu
 
 ### Business Type
 
+
+![Alt text](<docs/testing/pc hub facebook page.PNG>)
+
+
 The approach I took to this topic is a B2C type of business which means its Business To Customer.
 
 - Business goals addressed with this site
@@ -1402,15 +1406,331 @@ WAVE validator.
 
 ## Deployment
 
-- The site was deployed to Heroku. The steps to deploy are as follows:
+This application has been deployed by using the Heroku cloud platform. Please find below the neccessary procdures to replicate the deployment process.
 
-  - In the Heroku profile, create a new project, name must be unique, location set to Europe
-  - From the the project you have just created you can go to the setting page.
-  - Once in the settings page, Add the right Configuration Variables to the project. SECRET_KEY DATABASE_URL and CLOUDINARY_URL.
-  - Then from there you go to the Deploy page and link your GitHub repo to the project u intented to deploy.
-  - Then you can scroll at the end of the page and click on the Deploy Branch
-  - After Heroku starts compiling the files and creating your app , after 1 minute or so you'll have your delpyed app link.
-  - The deployed app can be found [here](https://rapblog.herokuapp.com/)
+You can find a template prepared by Code Institute that is designed to display this backend application in a modern web browser. This allows the project to be accessible for users without the need of any third party software other than an Internet browser application.
+
+Local Deployment
+Gitpod IDE is the development environment for this project.
+
+If you wish to make copy of this repository locally, you can clone it by inputting the following code into your preferred integrated development environment (IDE):
+
+                git clone https://github.com/beratzorlu/AutoMate.git
+
+As anoher method, you can click below button to create your own workspace using this repository if you are using Gitpod.e
+
+Open in Gitpod
+
+ElephantSQL Database Setup
+This project utilizes ElephantSQL for the PostgreSQL Database.
+
+To set up your own Postgres Database, follow these steps:
+
+Sign up with your GitHub account on the ElephantSQL website.
+Click on Create New Instance to create a new database.
+
+Provide a name for your database (you can use the name of your project, e.g., example-name).
+
+Choose the Tiny Turtle (Free) plan.
+
+You can leave the Tags field blank.
+
+Select the Region and Data Center closest to your location.
+
+Once the database is created, click on its name to view the database URL and Password.
+
+With these steps, you'll have your own PostgreSQL database set up and ready to use for your project.
+
+
+Stripe Integration
+
+This project utilizes Stripe to handle ecommerce payments securely.
+
+To connect your project with Stripe, follow these steps:
+
+Create a Stripe account and log in to the Stripe dashboard.
+
+In the dashboard, click to expand "Get your test API keys."
+
+You'll find two keys:
+
+            STRIPE_PUBLIC_KEY = Publishable Key (starts with pk)
+            STRIPE_SECRET_KEY = Secret Key (starts with sk)
+
+
+As a backup measure in case users prematurely close the purchase order page during payment, we can implement Stripe Webhooks.
+
+In the Stripe dashboard, navigate to Developers and select Webhooks.
+
+Click on Add Endpoint and provide the following URL:
+
+             https://HEROKU-APP-URL.herokuapp.com/checkout/wh/
+
+Click Receive all events to ensure all relevant events are captured.
+
+
+Click Add Endpoint to complete the process.
+
+
+After adding the endpoint, you'll receive a new key:
+
+
+STRIPE_WH_SECRET = Signing Secret (Webhook) Key (starts with wh)
+
+By integrating Stripe into your project,
+you can securely process payments and handle various payment-related events with ease.
+
+The Stripe API offers a robust set of features to manage transactions, handle card payments,
+
+and support multiple currencies,
+
+making it an excellent choice for handling ecommerce transactions in your application.
+
+Amazon AWS
+This project uses AWS to store media and static files online because Heroku does not persist this type of data.
+
+To connect your project to AWS, follow these steps after creating an AWS account and logging in. Make sure you are on the AWS Management Console page.
+
+S3 Bucket
+
+- Search for S3.
+
+- Create a new bucket, give it a name (matching your Heroku app name), and choose the region closest to you.
+
+- Uncheck Block all public access and acknowledge that the bucket will be public (required for it to work on roku).
+
+- From Object Ownership, ensure ACLs enabled and Bucket owner preferred are selected.
+
+- From the Properties tab, turn on static website hosting, and type index.html and error.html in their respective 
+
+- fields, then click Save.
+
+- From the Permissions tab, paste in the following CORS configuration:
+
+
+                [
+                	{
+                		"AllowedHeaders": ["Authorization"],
+                		"AllowedMethods": ["GET"],
+                		"AllowedOrigins": ["*"],
+                		"ExposeHeaders": []
+                	}
+                ]
+
+
+- Copy your ARN string.
+
+- From the Bucket Policy tab, select the Policy Generator link and use the following steps:
+
+- Policy Type: S3 Bucket Policy
+
+- Effect: Allow
+
+- Principal: *
+
+- Actions: GetObject
+
+- Amazon Resource Name (ARN): paste-your-ARN-here
+
+- Click Add Statement
+
+- Click Generate Policy
+
+- Copy the entire Policy and paste it into the Bucket Policy Editor
+
+
+                {
+                	"Id": "Policy1234567890",
+                	"Version": "2012-10-17",
+                	"Statement": [
+                		{
+                			"Sid": "Stmt1234567890",
+                			"Action": ["s3:GetObject"],
+                			"Effect": "Allow",
+                			"Resource": "arn:aws:s3:::your-bucket-name/*",
+                			"Principal": "*"
+		                }
+                	]
+                }
+
+
+- - Before you click "Save," add /* to the end of the Resource key in the Bucket Policy Editor (like above).
+
+- Click Save.
+
+- From the Access Control List (ACL) section, click "Edit" and enable List for Everyone (public access), and accept the warning box.
+
+- If the edit button is disabled, change the Object Ownership section above to ACLs enabled (mentioned above).
+
+- IAM (Identity and Access Management)
+
+- Back on the AWS Services Menu, search for and open IAM (Identity and Access Management).
+
+- From User Groups, click Create New Group.
+
+- Suggested Name: group-example-name (group + the project name)
+
+- Tags are optional, but you must click it to get to the review policy page.
+
+- From User Groups, select your newly created group and go to the Permissions tab.
+
+- Open the Add Permissions dropdown and click Attach Policies.
+
+- Select the policy, then click Add Permissions at the bottom when finished.
+
+- From the JSON tab, select the Import Managed Policy link.
+
+- Search for S3, select the AmazonS3FullAccess policy, and then Import.
+
+- You'll need your ARN from the S3 Bucket copied again, which is pasted into the "Resources" key on the Policy.
+
+
+                {
+                	"Version": "2012-10-17",
+                	"Statement": [
+                		{
+                			"Effect": "Allow",
+                			"Action": "s3:*",
+                			"Resource": [
+                				"arn:aws:s3:::your-bucket-name",
+                				"arn:aws:s3:::your-bucket-name/*"
+                			]
+                		}
+                	]
+                }
+
+
+- Click Review Policy.
+
+- Suggested Name: policy-example-name (policy + the project name)
+
+- Provide a description: "Access to S3 Bucket for example-name static files."
+
+- Click Create Policy.
+
+- From User Groups, click your "group-example-name".
+
+- Click Attach Policy.
+
+- Search for the policy you've just created ("policy-example-name") and select it, then Attach Policy.
+
+- From User Groups, click Add User.
+
+- Suggested Name: exampleuser-project-name (user + the project name)
+
+- For "Select AWS Access Type," select Programmatic Access.
+
+- Select the group to add your new user to: group-example-name
+
+- Tags are optional, but you must click it to get to the review user page.
+
+- Click Create User once done.
+
+- You should see a button to Download .csv, so click it to save a copy on your system.
+
+- IMPORTANT: once you pass this page, you cannot come back to download it again, so do it immediately!
+
+- This contains the user's Access key ID and Secret access key.
+
+- AWS_ACCESS_KEY_ID = Access key ID
+
+- AWS_SECRET_ACCESS_KEY = Secret access key
+
+- Final AWS Setup
+
+
+- If Heroku Config Vars has DISABLE_COLLECTSTATIC still, this can be removed now so that AWS will handle the static files.
+
+- Back within S3, create a new folder called: media.
+
+- Select any existing media images for your project to prepare them for being uploaded into the new folder.
+
+- Under Manage Public Permissions, select Grant public read access to this object(s).
+
+- No further settings are required, so click Upload.
+
+- Heroku Deployment
+
+- This project utilizes the services available at Heroku. Heroku is a platform as a service (PaaS) that allows 
+users - to build, deploy, and control applications in a cloud environment.
+
+
+
+Disclaimer: To be able successfully replicate the Heroku deployment process, it is highly reccomended that users setup an account on the platform prior to following the steps provided below.
+
+
+
+
+Select New in the top-right corner of your Heroku Dashboard after log-in.
+
+Select navigate to the Create new app button from the dropdown menu and select it.
+
+Assign a unique name to your application.
+
+Navigate to the region dropdown menu and select the region closest to you from either EU or USA.
+
+Select Create App.
+
+Navigate to your newly created application and select Settings.
+
+Click Reveal Config Vars.
+
+Add first Config Var.
+
+
+- Set the value of KEY to CREDS, copy and paste the data in your credentials file (ie. creds.json) into the value area.
+
+- Add second Config Var.
+
+- Set the value of KEY to PORT, and the value to 8000 then select add.
+
+- You need to add support to dependencies to be able to successfully deploy application, select Add Buildpack.
+
+- The order in which you list your dependencies is critical, select Python as the first dependency.
+
+- From the same menu, select Node.js after you select Python. (You can drag the list items upwards and downwards to change their order if needed.)
+
+- Scroll until you find your desired deployment method, select Enable Automatic Deploy to rebuild your project automatically every time you push a new commit. Select Manual Deployment to manually deploy from your desired 
+- branch on will.*
+
+- *If you have selected automatic deployment, your application will only deploy after your first push to the system.
+
+
+- After the completion of this process, Heroku needs two files further to deploy successfully. These are; - requirements.txt - Procfile
+
+
+- To install your project's requirements use: pip3 install -r requirements.txt.
+
+
+- If you have third party packages in your project the requirements file needs updated, use: pip3 freeze --local > requirements.txt
+
+
+- To create your Procfile, use: echo web: node index.js > Procfile
+
+
+- For Heroku deployment, follow these steps to connect your GitHub repository to the newly created app:
+
+
+- In the Terminal (CLI), connect to Heroku using this: heroku login -i
+
+- et the remote for Heroku: heroku git:remote -a <app_name> (replace <app_name> with your chosen name for your application without the angle-brackets)
+
+- Input commands git add, git commit, and git push to GitHub sequentially.
+
+- Finally, type git push heroku main in the terminal to connect to Github.
+Alternatively, you can connect to your Github account by following the below steps on Heroku's platform.
+
+Navigate to your Heroku account dashboard.
+
+Find the relevant project and click on its icon.
+
+On the next page, navigate to the Deploy subsection.
+
+Scroll down until you find Deployment method and find Use Github.
+
+Finally, input your Github account credentials to complete the process.
+
+
 
 ## Credits
 
