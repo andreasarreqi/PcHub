@@ -1,7 +1,7 @@
 # [Welcome to PC HUB](http://pchub-ac046d943cba.herokuapp.com/)
 
 
-(![Alt text](mockup.PNG)
+![Alt text](mockup.PNG)
 
 
 
@@ -1175,14 +1175,6 @@ FIELDS TESTED:
    </td>
    <td>PASS
    </td>
-   <td>Order Verification Email
-   </td>
-   <td>User submits the order
-   </td>
-   <td colspan="2" >An email is sent to the user containing all the order information like the full name, address, postal code, country ,email, order number, order price, delivery cost.
-   </td>
-   <td>PASS
-   </td>
   </tr>
   </tr>
   <td> Checkout success button
@@ -1213,16 +1205,7 @@ FIELDS TESTED:
    <td>PASS
    </td>
   </tr>
-  <td>Order Verification Email
-   </td>
-   <td>User submits the order
-   </td>
-   <td colspan="2" >An email is sent to the user containing all the order information like the full name, address, postal code, country ,email, order number, order price, delivery cost.
-   </td>
-   <td>PASS
-   </td>
-  </tr>
-  </tr>
+  <tr>
   <td> Newsletter form
    </td>
    <td>User fills the form and clicks the subscribe button
