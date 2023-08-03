@@ -58,7 +58,7 @@ ANY FUTURE DATE
 
 All User Stories were successfully performed.
 Each respective User Story was seperated in a milestone making for a more organised project and helping keeping track of tasks and functions planned to be implemented. Each milestone has a collection of issues that I thought would be helful towards finishing the project and i seperated them in either Fton-Ebd or Back-end.
-You can access them [here](https://github.com/andreasarreqi/PcHub/milestoness)
+You can access them [here](https://github.com/users/andreasarreqi/projects/13)
 
 All projects were assigned to epics, prioritized under the labels, Must have, should have, could have. They were assigned to piriority levels "Low Priority" "Medium Priority" "high Priority" . "Must have" stories were completed first, "should haves", "could haves" and finally "Wont have". It was done this way to ensure that all core requirements were completed first to give the project a complete feel, with the nice to have features being added should there be capacity.
 
